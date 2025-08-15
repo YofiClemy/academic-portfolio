@@ -1,37 +1,29 @@
-# BJT amplifier
+# BJT amplifier (gain-20 and gain-15)
 
-> Context: Undergraduate lab at UNSE.
-> 
+> Electronics lab (UNSE), May 2025. Single-stage EC amplifiers; design vs lab reality.
 
 ## Problem
-1–2 lines describing what was built/measured.
+Design EC amplifiers targeting |A_v| ≈ 20 and ≈15, then sweep frequency and compare to expectations.
 
 ## Setup
-- Instruments/components: Model numbers of DMM/oscilloscope/PSU/signal generator; components list.
-- Diagram/photo: `figures/setup.png` (add your photo/diagram)
-- Block diagram: `figures/block-diagram.png`
+BC337; V_CC=15 V; resistors per design (see report); input/output coupling caps and optional emitter bypass; scope + variable-freq source.
 
 ## Method
-Brief steps: simulate, build, measure; include sampling rate, averaging, calibration.
+Pick I_C, set V_E for thermal headroom, center Q on load line, compute R_C and R_E; choose divider R1, R2 for V_B; size C_in/C_out/C_E for f_min≈20 Hz. Build, then sweep ~20 Hz to 3.2 MHz and log |A_v|.
 
 ## Key results
-- Mean: …
-- σ (std dev): …
-- % error: …
-- Bandwidth / efficiency / propagation example: …
+- **Amplifier 1:** settled at **|A_v| ≈ 7** at low frequency without bypass; bandwidth roll-off: **−3.85** @ 500 kHz, **−2** @ 1 MHz, **−1** @ 2 MHz, **−0.75** @ 3.2 MHz.  
+- **Amplifier 2:** design for |A_v| ≈ 15 with partial bypass; lab values documented in report plots; outcome limited by device parasitics and chosen bias.
 
 ## What I learned / skills
-e.g., 4-wire resistance, Wheatstone, LTspice, Proteus, MATLAB, Python, HDL/testbench.
+Q-point tradeoffs, emitter degeneration vs gain/stability, coupling capacitor sizing, measured frequency response vs small-signal model.
 
 ## Files
-- Report: [`report.pdf`](report.pdf)
-- Data: [`data/`](data/)
+- Report: [`report.pdf`](report.pdf) • Spanish original in [`/es/TP5 - Electronica - Chevauchey C.pdf`](es/)
 - Figures: [`figures/`](figures/)
 - Code: [`code/`](code/)
 
 ---
 
 **My analysis approach**  
-State assumptions, derive expected behavior, simulate for bounds, measure, compute uncertainty (Type A/B), propagate errors, reconcile deltas with non-idealities.
-
-*Licensing*: Code MIT. Docs/figures CC BY-NC 4.0.
+Derived target R_E1 (unbypassed) for gain setpoint, split R_E into AC/DC parts, then matched lab sweep against the expected pole roll-off.

@@ -1,37 +1,32 @@
-# Operational amplifier
+# Op-amp: gain-20 amplifier + square-wave oscillator
 
-> Context: Undergraduate lab at UNSE.
-> 
+> Electronics II (UNSE), May 2025. LM741 non-inverting amplifier and RC relaxation oscillator.
 
 ## Problem
-1–2 lines describing what was built/measured.
+1) Build a non-inverting amplifier with **A_v = 20**.  
+2) Design a variable-frequency square-wave oscillator between **1 kHz** and **10 kHz** with ~5 Vpp output.
 
 ## Setup
-- Instruments/components: Model numbers of DMM/oscilloscope/PSU/signal generator; components list.
-- Diagram/photo: `figures/setup.png` (add your photo/diagram)
-- Block diagram: `figures/block-diagram.png`
+LM741; R_f and R_1 for non-inverting gain; RC network with positive feedback for relaxation oscillator; pot + series resistor for frequency span; scope + bench supply.
 
 ## Method
-Brief steps: simulate, build, measure; include sampling rate, averaging, calibration.
+- **Amplifier:** A_v = 1 + R_f/R_1 ⇒ choose **R_f ≈ 19 kΩ**, **R_1 ≈ 1 kΩ**.  
+- **Oscillator:** use Schmitt-trigger comparator + RC; with β = R1/(R1+R2) ≈ 0.5, frequency **f ≈ 0.455/(R·C)**. Choose **C = 10 nF**, **R ≈ 4.7 kΩ to ~50 kΩ** to span 10→1 kHz with a safety series resistor.
 
 ## Key results
-- Mean: …
-- σ (std dev): …
-- % error: …
-- Bandwidth / efficiency / propagation example: …
+- Non-inverting stage: nominal **A_v ≈ 20** with 1 kΩ/19 kΩ.  
+- Oscillator range: with **C = 10 nF** and **R ≈ 4.7–50 kΩ**, **f ≈ 10 kHz → 1 kHz**.  
+- Output swing around 5 V in the chosen supply rails (clipped by op-amp limits).
 
 ## What I learned / skills
-e.g., 4-wire resistance, Wheatstone, LTspice, Proteus, MATLAB, Python, HDL/testbench.
+Op-amp gain setting, Schmitt trigger design, RC timing vs hysteresis, practical limits of old-school LM741.
 
 ## Files
-- Report: [`report.pdf`](report.pdf)
-- Data: [`data/`](data/)
+- Report: [`report.pdf`](report.pdf) • Spanish original in [`/es/TP7 - Electronica - Chevauchey C.pdf`](es/)
 - Figures: [`figures/`](figures/)
 - Code: [`code/`](code/)
 
 ---
 
 **My analysis approach**  
-State assumptions, derive expected behavior, simulate for bounds, measure, compute uncertainty (Type A/B), propagate errors, reconcile deltas with non-idealities.
-
-*Licensing*: Code MIT. Docs/figures CC BY-NC 4.0.
+Mapped the oscillator frequency law from β and RC, then selected a pot + fixed resistor to guarantee the requested 1–10 kHz span without dropping out.
