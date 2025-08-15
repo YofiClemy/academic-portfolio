@@ -1,0 +1,3 @@
+method,U_V,Uv_V,Ip_mA,Ix_mA,Rx_Ohm,Rx_kOhm,Rx_total_uncertainty_pct,Rx_abs_uncertainty_Ohm,Rx_low_Ohm,Rx_high_Ohm
+comparison,25.0,2.2,,,254900.0,254.9,15.759,40169.7,214730.3,295069.7
+substitution,,,11.1,6.75,493.3,,26.28,129.6,363.7,622.9

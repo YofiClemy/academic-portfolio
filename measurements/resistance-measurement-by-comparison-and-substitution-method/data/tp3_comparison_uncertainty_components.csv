@@ -1,0 +1,7 @@
+component,percent
+class_voltmeter_U,1.0
+class_voltmeter_Uv,11.363
+appreciation_voltmeter_U,0.27
+appreciation_voltmeter_Uv,3.03
+Rx_given_by_constructor,0.1
+Rx_total_percent,15.759

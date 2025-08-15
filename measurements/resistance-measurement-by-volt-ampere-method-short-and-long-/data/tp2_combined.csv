@@ -1,0 +1,3 @@
+topology,Vm_V,Im_mA,Rm_Ohm,ei_frac,Rx_Ohm,RV_kOhm,RA_Ohm,ei_model_from_RV_RA,ei_model_note,e_cl_voltmeter_pct,e_cl_ammeter_pct,e_app_voltmeter_pct,e_app_ammeter_pct,e_total_pct,Rx_abs_unc_Ohm,Rx_range_low_Ohm,Rx_range_high_Ohm
+short,25.0,71.2,351.12,0.0141,356.132,24.6,0.1,0.01427,model: Rx/(Rx+RV),1.0,1.4,0.27,0.37,3.04,10.826,345.306,366.958
+long,25.0,70.0,357.14,-0.00028,357.04,24.6,0.1,-0.00028,model: -RA/(Rx+RA),1.0,1.43,0.27,0.38,3.08,10.997,346.043,368.037

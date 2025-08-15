@@ -1,0 +1,3 @@
+topology,e_cl_voltmeter_pct,e_cl_ammeter_pct,e_app_voltmeter_pct,e_app_ammeter_pct,e_total_pct
+short,1.0,1.4,0.27,0.37,3.04
+long,1.0,1.43,0.27,0.38,3.08
