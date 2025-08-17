@@ -1,0 +1,11 @@
+title: "Cl\xE9ment \u2014 Engineering Portfolio"
+description: Power Systems, Automation & Electronics
+theme: minima
+plugins:
+- jekyll-seo-tag
+markdown: kramdown
+kramdown:
+  input: GFM
+baseurl: '/academic-portfolio'
+url: 'https://yoficlemy.github.io'
+repo_url_base: "https://github.com/YofiClemy/academic-portfolio/tree/main"

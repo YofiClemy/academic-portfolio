@@ -1,0 +1,15 @@
+
+.projects-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.card{border:1px solid #ddd;border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.card .thumb{height:140px;display:flex;align-items:center;justify-content:center;background:#f6f8fa}
+.card .thumb img{max-height:100%;max-width:100%;object-fit:cover}
+.card .body{padding:12px}
+.card h3{margin:0 0 6px 0;font-size:1.05rem}
+.card p{margin:0 0 8px;color:#555}
+.card .actions{margin-top:auto;display:flex;gap:8px;padding:12px}
+.card .btn{display:inline-block;padding:6px 10px;border:1px solid #ddd;border-radius:8px;text-decoration:none;color:#111}
+.card .btn.primary{border-color:#0969da;color:#0969da}
+.filter{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 16px}
+.filter .chip{padding:5px 10px;border:1px solid #ddd;border-radius:999px;background:#fff;cursor:pointer}
+.filter .chip.active{border-color:#0969da;color:#0969da}
+.small{font-size:0.9rem;color:#666}
