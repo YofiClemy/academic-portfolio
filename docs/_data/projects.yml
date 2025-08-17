@@ -2,23 +2,23 @@
   title: Electronics II (7 Labs)
   subtitle: Analog, diodes, BJT, op-amp
   thumb: ''
-  path: electronics/
+  path: "electronics/"
   report: ''
 - category: logic
   title: Traffic Lights FSM (Proteus)
   subtitle: Moore FSM + timing divider
   thumb: ''
-  path: logics
+  path: "logics/"
   report: ''
 - category: power
   title: Rankine Cycle Studies
   subtitle: Superheat vs no superheat; ideal vs real
   thumb: ''
-  path: machines/internal-combustion-diesel-otto-dual
+  path: "machines/internal-combustion-diesel-otto-dual"
   report: ''
 - category: power
   title: Otto / Diesel / Dual
   subtitle: η_th vs compression ratio
   thumb: ''
-  path: machines/rankine-analysis
+  path: "machines/rankine-analysis"
   report: ''
