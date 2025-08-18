@@ -7,37 +7,39 @@
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
     const btn = document.getElementById('theme-toggle');
-    if(btn){
+    if (btn) {
       btn.textContent = next === 'light' ? '☾ Dark' : '☀︎ Light';
       btn.setAttribute('aria-label', 'Switch to ' + (next === 'light' ? 'dark' : 'light') + ' theme');
     }
   }
 
-  function insertButton(){
-    // Prefer putting the toggle inside the nav links container
-    const target = document.querySelector('.site-nav .trigger');
-    const header = document.querySelector('.site-header .wrapper') || document.querySelector('.site-header');
-    const parent = target || header;
-    if(!parent) return;
-
-    // Avoid duplicates
-    if(document.getElementById('theme-toggle')) return;
-
+  function ensureButton(container){
+    if (!container || document.getElementById('theme-toggle')) return;
     const btn = document.createElement('button');
     btn.id = 'theme-toggle';
-    btn.className = 'theme-toggle page-link'; // page-link keeps Minima spacing
+    btn.className = 'theme-toggle page-link';
     btn.type = 'button';
     btn.textContent = theme === 'light' ? '☾ Dark' : '☀︎ Light';
-    btn.addEventListener('click', function(){
+    btn.addEventListener('click', () => {
       theme = (document.documentElement.getAttribute('data-theme') === 'light') ? 'dark' : 'light';
       apply(theme);
     });
-    parent.appendChild(btn);
+    container.appendChild(btn); // last item => right side (with CSS below)
   }
 
-  if (document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', insertButton);
+  function start(){
+    const trg = document.querySelector('.site-nav .trigger');
+    if (trg) { ensureButton(trg); return; }
+    const obs = new MutationObserver(() => {
+      const t = document.querySelector('.site-nav .trigger');
+      if (t) { ensureButton(t); obs.disconnect(); }
+    });
+    obs.observe(document.documentElement, { childList:true, subtree:true });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start);
   } else {
-    insertButton();
+    start();
   }
 })();

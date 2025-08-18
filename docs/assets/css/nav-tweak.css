@@ -1,0 +1,16 @@
+/* Make header readable in both themes */
+.site-header{background:var(--header-bg);border-bottom:1px solid var(--header-border)}
+.site-title,.site-title a{color:var(--header-fg)!important}
+.site-nav .page-link{color:var(--header-link)!important}
+.site-nav .page-link:hover{color:var(--brand)!important}
+
+/* Flex the nav row, and put the toggle at the far right (as last item) */
+.site-nav .trigger{display:flex;gap:14px;align-items:center}
+.theme-toggle{border:1px solid var(--border);border-radius:999px;padding:4px 10px;background:transparent;color:var(--header-link);cursor:pointer}
+.theme-toggle:hover{border-color:var(--brand);color:var(--brand)}
+@media (max-width:600px){.site-nav .trigger{flex-direction:column;align-items:flex-start}}
+
+/* Header color variables reused from modern.css */
+:root{--header-bg:#0b0c10;--header-fg:#e9eef5;--header-link:#e9eef5;--header-border:#1e2230}
+html[data-theme="light"]{--header-bg:#fff;--header-fg:#111827;--header-link:#111827;--header-border:#e5e7eb}
+html[data-theme="dark"]{--header-bg:#0b0c10;--header-fg:#e9eef5;--header-link:#e9eef5;--header-border:#1e2230}
