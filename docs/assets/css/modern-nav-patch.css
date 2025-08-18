@@ -1,0 +1,17 @@
+
+/* Nav layout: keep links readable and place toggle on the right */
+.site-header{background:var(--header-bg);border-bottom:1px solid var(--header-border)}
+.site-title, .site-title a{color:var(--header-fg) !important}
+.site-nav .page-link{color:var(--header-link) !important}
+.site-nav .page-link:hover{color:var(--brand) !important}
+
+/* Make nav a flex row; push toggle to the right */
+.site-nav .trigger{display:flex;gap:14px;align-items:center}
+#theme-toggle{margin-left:auto;border:1px solid var(--border);border-radius:999px;padding:4px 10px;background:transparent;color:var(--header-link);cursor:pointer}
+#theme-toggle:hover{border-color:var(--brand);color:var(--brand)}
+
+/* Ensure responsiveness for mobile menu (Minima collapses .trigger) */
+@media screen and (max-width: 600px){
+  .site-nav .trigger{flex-direction:column;align-items:flex-start}
+  #theme-toggle{margin-left:0}
+}
