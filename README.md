@@ -21,12 +21,8 @@ This repo is organized with one-minute READMEs in each project, then full report
   code/                  # LTspice/Proteus/MATLAB/Python/Verilog
   es/                    # original spanish report
 ```
-Licensing: Code under MIT. Docs/figures under CC BY-NC 4.0.
-
-## Landing page
-GitHub renders the landing page via `index.md`. Enable GitHub Pages (main branch, /root) if you want a site.
-
----
 
 **Skills & Techniques across projects**  
 4-wire resistance, ADC calibration, Wheatstone, VA short/long connections, instrument class estimation, Bode from step response, LTspice, Proteus, MATLAB, Python, uncertainty propagation, HDL/testbench, timing/state diagrams.
+
+Licensing: Code under MIT. Docs/figures under CC BY-NC 4.0.

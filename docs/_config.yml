@@ -1,3 +1,7 @@
+header_pages:
+  - about.md
+  - cv.md
+  - contact.md
 title: "Cl\xE9ment \u2014 Engineering Portfolio"
 description: Power Systems, Automation & Electronics
 theme: minima
