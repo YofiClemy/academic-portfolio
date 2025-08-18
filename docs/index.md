@@ -1,11 +1,9 @@
 ---
-layout: home
-title: Clement — Engineering Portfolio
+layout: landing
+title: ""
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/modern.css' | relative_url }}">
-
-<!-- Keep it minimal to avoid repetition -->
+<!-- Minimal header to avoid repetition -->
 <div class="hero" style="max-width:1040px;margin:18px auto 6px;padding:0 16px;">
   <div class="hero__meta">Updated: {{ site.time | date: "%Y-%m-%d" }}</div>
 </div>
@@ -26,5 +24,3 @@ title: Clement — Engineering Portfolio
   {% include card.html p=p %}
 {% endfor %}
 </section>
-
-<script defer src="{{ '/assets/js/portfolio.js' | relative_url }}"></script>
