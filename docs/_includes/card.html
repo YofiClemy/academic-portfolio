@@ -1,0 +1,22 @@
+{% assign p = include.p %}
+<article class="card{% if p.is_group %} card--group{% endif %}" data-cat="{{ p.category }}" data-title="{{ p.title | downcase }}" data-sub="{{ p.subtitle | downcase }}">
+  <div class="card__thumb {% unless p.thumb %}card__thumb--empty{% endunless %}">
+    {% if p.thumb and p.thumb != '' %}
+      <img src="{{ p.thumb | relative_url }}" alt="thumbnail for {{ p.title }}">
+    {% endif %}
+    <div class="card__tags">
+      <span class="tag">{{ p.category | upcase }}</span>
+      {% if p.tags %}{% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}{% endif %}
+    </div>
+  </div>
+  <div class="card__body">
+    <h3 class="card__title">{{ p.title }}</h3>
+    <p class="card__subtitle">{{ p.subtitle }}</p>
+    <div class="card__actions">
+      <a class="btn primary" href="{{ site.repo_url_base }}{% if p.path %}/{{ p.path }}{% endif %}" target="_blank" rel="noopener">Repo</a>
+      {% if p.report and p.report != '' %}
+        <a class="btn" href="{{ p.report | relative_url }}" target="_blank" rel="noopener">Report</a>
+      {% endif %}
+    </div>
+  </div>
+</article>
