@@ -1,0 +1,17 @@
+{%- comment -%} Global head override {%- endcomment -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{% if page.title and page.title != "" %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+
+{# Minima base CSS #}
+<link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+
+{# Your site-wide CSS #}
+<link rel="stylesheet" href="{{ '/assets/css/modern.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/nav-tweak.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/header-align-fix.css' | relative_url }}">
+
+{# Your site-wide JS #}
+<script defer src="{{ '/assets/js/portfolio.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/theme.js' | relative_url }}"></script>
