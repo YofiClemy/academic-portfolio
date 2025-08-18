@@ -1,20 +1,6 @@
-
-/* Hide the auto H1 from default minima home just in case */
-.page-heading{display:none}
-
-:root{
-  --bg:#0b0c10;
-  --card:#11131a;
-  --muted:#9aa4b2;
-  --text:#e9eef5;
-  --brand:#6aa7ff;
-  --border:#1e2230;
-  --chip:#171a22;
-  --chip-border:#2a2f3a;
-}
+/* minimal dark look + pills */
+:root{--bg:#0b0c10;--card:#11131a;--muted:#9aa4b2;--text:#e9eef5;--brand:#6aa7ff;--border:#1e2230;--chip:#171a22;--chip-border:#2a2f3a}
 body{background:var(--bg);color:var(--text)}
-.hero__meta{color:var(--muted)}
-
 .controls{max-width:1040px;margin:10px auto 12px;padding:0 16px;display:grid;gap:10px}
 #q{width:100%;padding:10px 12px;border:1px solid var(--chip-border);border-radius:10px;background:#0f1116;color:var(--text)}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
@@ -35,5 +21,5 @@ body{background:var(--bg);color:var(--text)}
 .btn{display:inline-block;padding:7px 10px;border:1px solid #2b3242;border-radius:10px;color:#d9e5ff}
 .btn.primary{border-color:#3f5ed7;color:#cfe1ff}
 
-/* Footer minimal */
-.site-footer .site-title,.site-footer .site-description,.site-footer .footer-col-1 p:first-child{display:none}
+/* hide any default Minima page H1 */
+.page-heading{display:none}

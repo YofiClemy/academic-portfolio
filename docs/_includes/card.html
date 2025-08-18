@@ -1,5 +1,6 @@
 {% assign p = include.p %}
-<article class="card{% if p.is_group %} card--group{% endif %}" data-cat="{{ p.category }}" data-title="{{ p.title | downcase }}" data-sub="{{ p.subtitle | downcase }}">
+<article class="card{% if p.is_group %} card--group{% endif %}"
+         data-cat="{{ p.category }}" data-title="{{ p.title | downcase }}" data-sub="{{ p.subtitle | downcase }}">
   <div class="card__thumb {% unless p.thumb %}card__thumb--empty{% endunless %}">
     {% if p.thumb and p.thumb != '' %}
       <img src="{{ p.thumb | relative_url }}" alt="thumbnail for {{ p.title }}">
