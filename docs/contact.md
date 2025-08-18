@@ -3,8 +3,6 @@ layout: page
 title: Contact
 permalink: /contact/
 ---
-<link rel="stylesheet" href="{{ '/assets/css/modern.css' | relative_url }}">
-<script defer src="{{ '/assets/js/theme.js' | relative_url }}"></script>
 
 # Contact
 

@@ -3,8 +3,6 @@ layout: page
 title: CV
 permalink: /cv/
 ---
-<link rel="stylesheet" href="{{ '/assets/css/modern.css' | relative_url }}">
-<script defer src="{{ '/assets/js/theme.js' | relative_url }}"></script>
 
 # Curriculum Vitae
 
