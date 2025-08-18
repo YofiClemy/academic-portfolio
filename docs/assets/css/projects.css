@@ -13,3 +13,21 @@
 .filter .chip{padding:5px 10px;border:1px solid #ddd;border-radius:999px;background:#fff;cursor:pointer}
 .filter .chip.active{border-color:#0969da;color:#0969da}
 .small{font-size:0.9rem;color:#666}
+
+
+/* === Reduce repetition & improve empty-thumb look === */
+.card__thumb--empty{min-height:100px;background:#0f1116}
+.card__thumb--empty img{display:none}
+.card__tags{position:absolute;top:8px;left:8px;display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:11px;padding:3px 7px;border-radius:999px;background:#101826;border:1px solid #263043;color:#bcd3ff}
+.card--group .card__thumb{min-height:80px}
+.card--group .card__title{text-transform:uppercase;letter-spacing:.6px}
+/* Footer — keep minimal */
+.site-footer .site-title,
+.site-footer .site-description,
+.site-footer .footer-col-1 p:first-child{display:none}
+
+
+.page-content h1{margin-top:0.2rem}
+.page-content ul{line-height:1.6}
+.page-content blockquote{color:#63708b;border-left:4px solid #2a2f3a;padding-left:10px}
