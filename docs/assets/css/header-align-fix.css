@@ -1,0 +1,26 @@
+
+/* --- Header/Nav alignment fix (site‑wide) --- */
+.site-header{padding:8px 0;background:var(--header-bg);border-bottom:1px solid var(--header-border)}
+.site-header .wrapper{display:flex;align-items:center;gap:16px}
+.site-title,.site-title a{line-height:1;color:var(--header-fg)!important}
+/* push nav to the right */
+.site-nav{margin-left:auto;}
+/* nav links arranged in a row, vertically centered */
+.site-nav .trigger{display:flex;align-items:center;gap:14px}
+/* normalize link + toggle height/spacing so they align the same on every layout */
+.site-nav .page-link,#theme-toggle{
+  display:inline-flex;align-items:center;gap:6px;
+  line-height:1;padding:6px 10px;border-radius:999px
+}
+/* keep toggle styling consistent */
+#theme-toggle{border:1px solid var(--border);background:transparent;color:var(--header-link)}
+#theme-toggle:hover{border-color:var(--brand);color:var(--brand)}
+/* readable link colors */
+.site-nav .page-link{color:var(--header-link)!important}
+.site-nav .page-link:hover{color:var(--brand)!important}
+
+/* mobile: stack cleanly */
+@media(max-width:600px){
+  .site-nav .trigger{flex-direction:column;align-items:flex-start;gap:10px}
+  .site-nav{margin-left:0}
+}
