@@ -3,10 +3,11 @@ layout: page
 title: CV
 permalink: /cv/
 ---
+<link rel="stylesheet" href="{{ '/assets/css/modern.css' | relative_url }}">
+<script defer src="{{ '/assets/js/theme.js' | relative_url }}"></script>
 
 # Curriculum Vitae
 
-> Tip: Print this page to PDF (browser **Print → Save as PDF**) for a one‑pager export.
 
 ## Education
 - **B.Eng. in Electrical Engineering**, UNSE — in progress (3rd year)

@@ -3,6 +3,8 @@ layout: page
 title: About
 permalink: /about/
 ---
+<link rel="stylesheet" href="{{ '/assets/css/modern.css' | relative_url }}">
+<script defer src="{{ '/assets/js/theme.js' | relative_url }}"></script>
 
 # About
 
