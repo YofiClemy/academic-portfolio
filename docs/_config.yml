@@ -8,6 +8,7 @@ description: Power Systems, Automation & Electronics
 theme: minima
 plugins:
 - jekyll-seo-tag
+- jekyll-sitemap
 markdown: kramdown
 kramdown:
   input: GFM
