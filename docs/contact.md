@@ -6,8 +6,8 @@ permalink: /contact/
 
 # Contact
 
-- **Email (IEEE):** <your_ieee_email@example.org>  <!-- replace with your address -->
+- **Email (IEEE):** <chevauchey.clement@ieee.org>
 - **GitHub:** <https://github.com/yoFiclemy>
-- **LinkedIn:** <https://www.linkedin.com/in/your-handle/>
+- **LinkedIn:** 
 
-> Prefer email for collaboration and opportunities. I’m open to roles in **power systems & automation** (France/EU or remote).
+> Prefer email for collaboration and opportunities. I’m open to roles projects in **power systems & automation** (France/EU/Argentina or remote).
