@@ -1,6 +1,6 @@
 ---
 layout: page
-title: CV
+title: "CV"
 permalink: /cv/
 ---
 [Download the PDF](./assets/CV.pdf)
