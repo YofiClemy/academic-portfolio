@@ -86,3 +86,5 @@ html[data-theme="light"] .tag{background:#eef2ff;border-color:#c7d2fe;color:#1e3
 
 /* Hide Minima's default page heading if present */
 .page-heading{display:none}
+
+.pdf-embed{height:90vh;border:1px solid var(--border);border-radius:8px;overflow:hidden}
