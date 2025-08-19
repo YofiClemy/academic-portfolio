@@ -25,7 +25,7 @@
   category: power
   path: machines/rankine-analysis
   subtitle: "Superheat vs no superheat; ideal vs real"
-  outcome: erified instrument class; measured R, Z, and single/three-phase power using VA, comparison/substitution, Wheatstone, 3A/3V, wattmeter & Aron; quantified uncertainty.  skills: Cycle modeling, property tables, η_th gap (ideal vs real), plots
+  outcome: "Verified instrument class; measured R, Z, and single/three-phase power using VA, comparison/substitution, Wheatstone, 3A/3V, wattmeter & Aron; quantified uncertainty.  skills: Cycle modeling, property tables, η_th gap (ideal vs real), plots"
   skills: Calibration, Type A/B uncertainty, bridge balancing, phasors & PF, wattmeter wiring, data analysis (Python), clear lab reporting
 
 - title: Otto / Diesel / Dual
