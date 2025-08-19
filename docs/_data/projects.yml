@@ -4,6 +4,15 @@
   subtitle: Analog, diodes, BJT, op-amp
   outcome: Built & verified rectifier, clipper, BJT single/cascade, and op-amp labs against specs.
   skills: LTspice/Proteus, biasing & small-signal, gain/bandwidth, measurement planning
+  thumb: /assets/thumbs/electronics.png
+  
+- title: Electrical Measurements (7 Labs)
+  category: Measurements
+  path: measurements/
+  subtitle: Metrology & AC/DC measurement techniques
+  outcome: Built & verified rectifier, clipper, BJT single/cascade, and op-amp labs against specs.
+  skills: LTspice/Proteus, biasing & small-signal, gain/bandwidth, measurement planning
+  thumb: /assets/thumbs/measurements.png
 
 - title: Traffic Lights FSM (Proteus)
   category: logic
@@ -15,9 +24,9 @@
 - title: Rankine Cycle Studies
   category: power
   path: machines/rankine-analysis
-  subtitle: Superheat vs no superheat; ideal vs real
-  outcome: Compared η_th and specific work across pressure/temperature/superheat cases.
-  skills: Cycle modeling, property tables, η_th gap (ideal vs real), plots
+  subtitle: "Superheat vs no superheat; ideal vs real"
+  outcome: erified instrument class; measured R, Z, and single/three-phase power using VA, comparison/substitution, Wheatstone, 3A/3V, wattmeter & Aron; quantified uncertainty.  skills: Cycle modeling, property tables, η_th gap (ideal vs real), plots
+  skills: Calibration, Type A/B uncertainty, bridge balancing, phasors & PF, wattmeter wiring, data analysis (Python), clear lab reporting
 
 - title: Otto / Diesel / Dual
   category: power
