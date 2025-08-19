@@ -6,13 +6,20 @@
       <img src="{{ p.thumb | relative_url }}" alt="thumbnail for {{ p.title }}">
     {% endif %}
     <div class="card__tags">
-      <span class="tag">{{ p.category | upcase }}</span>
+      <span class="tag tag--cat">{{ p.category | capitalize }}</span>
       {% if p.tags %}{% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}{% endif %}
     </div>
   </div>
   <div class="card__body">
     <h3 class="card__title">{{ p.title }}</h3>
     <p class="card__subtitle">{{ p.subtitle }}</p>
+    {% if p.outcome or p.skills %}
+    <p class="card__meta">
+      {% if p.outcome %}<strong>Outcome:</strong> {{ p.outcome }}{% endif %}
+      {% if p.outcome and p.skills %} · {% endif %}
+      {% if p.skills %}<strong>Skills:</strong> {{ p.skills }}{% endif %}
+    </p>
+    {% endif %}
     <div class="card__actions">
       <a class="btn primary" href="{{ site.repo_url_base }}{% if p.path %}/{{ p.path }}{% endif %}" target="_blank" rel="noopener">Repo</a>
       {% if p.report and p.report != '' %}

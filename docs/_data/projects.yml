@@ -1,24 +1,27 @@
-- category: electronics
-  title: Electronics II (7 Labs)
+- title: Electronics II (7 Labs)
+  category: electronics
+  path: electronics/
   subtitle: Analog, diodes, BJT, op-amp
-  thumb: ''
-  path: "electronics/"
-  report: ''
-- category: logic
-  title: Traffic Lights FSM (Proteus)
+  outcome: Built & verified rectifier, clipper, BJT single/cascade, and op-amp labs against specs.
+  skills: LTspice/Proteus, biasing & small-signal, gain/bandwidth, measurement planning
+
+- title: Traffic Lights FSM (Proteus)
+  category: logic
+  path: logics/
   subtitle: Moore FSM + timing divider
-  thumb: ''
-  path: "logics/"
-  report: ''
-- category: power
-  title: Rankine Cycle Studies
+  outcome: Working, debounced state machine with deterministic phase timing.
+  skills: FSM design, timing division, simulation, test cases
+
+- title: Rankine Cycle Studies
+  category: power
+  path: machines/rankine-analysis
   subtitle: Superheat vs no superheat; ideal vs real
-  thumb: ''
-  path: "machines/internal-combustion-diesel-otto-dual"
-  report: ''
-- category: power
-  title: Otto / Diesel / Dual
+  outcome: Compared η_th and specific work across pressure/temperature/superheat cases.
+  skills: Cycle modeling, property tables, η_th gap (ideal vs real), plots
+
+- title: Otto / Diesel / Dual
+  category: power
+  path: machines/internal-combustion-diesel-otto-dual
   subtitle: η_th vs compression ratio
-  thumb: ''
-  path: "machines/rankine-analysis"
-  report: ''
+  outcome: Quantified efficiency impact of r, γ, and heat-addition model (Otto/Diesel/Dual).
+  skills: Thermo cycles, parametric sweeps, result interpretation
