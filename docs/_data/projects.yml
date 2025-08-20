@@ -30,7 +30,7 @@
   path: machines/rankine-analysis
   subtitle: "Superheat vs no superheat; ideal vs real"
   outcome: "Compared η_th and specific work across pressure/temperature/superheat cases."
-  skills: Cycle modeling, property tables, η_th gap (ideal vs real), plots.
+  skills: "Cycle modeling, property tables, η_th gap (ideal vs real), plots"
   thumb : /assets/thumbs/Rankine.png
   readme: true
 

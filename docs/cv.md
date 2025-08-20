@@ -10,11 +10,10 @@ permalink: /cv/
 - **Tools:** PowerFactory (LF/SC), Python (NumPy/Pandas/Matplotlib), LTspice/Proteus, TIA Portal basics.
 - **Languages:** French (native), Spanish (C1), English (C1).
 
-{% assign cv = '/assets/CV.pdf' | relative_url %}
-
+{% assign cv = '/assets/_CV.pdf' | relative_url %}
 <div class="pdf-embed">
-  <object data="{{ cv }}" type="application/pdf" width="100%" height="100%">
-    <!-- Fallback if the browser blocks <object>: -->
+  <object data="{{ cv }}" type="application/pdf" width="100%" height="90%">
     <iframe src="{{ cv }}" width="100%" height="100%"></iframe>
   </object>
 </div>
+<p><a href="{{ cv }}">Download PDF</a></p>
