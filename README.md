@@ -31,7 +31,7 @@
 </p>
 
 - 🌐 Live site: **https://yoficlemy.github.io/academic-portfolio/**
-- 📄 CV: [`docs/assets/Clement_CV.pdf`](docs/assets/Clement_CV.pdf)
+- 📄 CV: [`docs/assets/CV.pdf`](docs/assets/CV.pdf)
 
 # Academic Portfolio — Labs and Projects
 
