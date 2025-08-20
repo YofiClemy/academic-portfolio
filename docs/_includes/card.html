@@ -21,10 +21,36 @@
     </p>
     {% endif %}
     <div class="card__actions">
-      <a class="btn primary" href="{{ site.repo_url_base }}{% if p.path %}/{{ p.path }}{% endif %}" target="_blank" rel="noopener">Repo</a>
+      {%- comment -%} Primary: Repo always shown {%- endcomment -%}
+      <a class="btn primary"
+         href="{{ site.repo_url_base }}{% if p.path %}/{{ p.path }}{% endif %}"
+         target="_blank" rel="noopener">Repo</a>
+  
+      {%- comment -%} README: auto-build link if true/auto and path exists; else accept a URL {%- endcomment -%}
+      {% assign readme_url = nil %}
+      {% if p.readme %}
+        {% if p.readme == true or p.readme == 'auto' %}
+          {% if p.path %}{% assign readme_url = site.repo_url_base | append: '/' | append: p.path | append: '#readme' %}{% endif %}
+        {% else %}
+          {% assign readme_url = p.readme %}
+        {% endif %}
+      {% endif %}
+      {% if readme_url %}
+        <a class="btn" href="{{ readme_url }}" target="_blank" rel="noopener">README</a>
+      {% endif %}
+  
+      {%- comment -%} Report (PDF or URL) {%- endcomment -%}
       {% if p.report and p.report != '' %}
-        <a class="btn" href="{{ p.report | relative_url }}" target="_blank" rel="noopener">Report</a>
+        {% assign report_href = p.report %}
+        {% unless report_href contains '://' %}{% assign report_href = report_href | relative_url %}{% endunless %}
+        <a class="btn" href="{{ report_href }}" target="_blank" rel="noopener">Report</a>
+      {% endif %}
+  
+      {%- comment -%} Spanish Report (PDF or URL) {%- endcomment -%}
+      {% if p.report_es and p.report_es != '' %}
+        {% assign report_es_href = p.report_es %}
+        {% unless report_es_href contains '://' %}{% assign report_es_href = report_es_href | relative_url %}{% endunless %}
+        <a class="btn" href="{{ report_es_href }}" target="_blank" rel="noopener">Reporte ES</a>
       {% endif %}
     </div>
-  </div>
 </article>

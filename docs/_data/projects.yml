@@ -5,6 +5,7 @@
   outcome: Built & verified rectifier, clipper, BJT single/cascade, and op-amp labs against specs.
   skills: LTspice/Proteus, biasing & small-signal, gain/bandwidth, measurement planning
   thumb: /assets/thumbs/electronics.png
+  readme: true
   
 - title: Electrical Measurements (7 Labs)
   category: Measurements
@@ -13,6 +14,7 @@
   outcome: "Verified instrument class; measured R, Z, and single/three-phase power using VA, comparison/substitution, Wheatstone, 3A/3V, wattmeter & Aron; quantified uncertainty."
   skills: "Calibration, Type A/B uncertainty, bridge balancing, phasors & PF, wattmeter wiring, data analysis (Python), clear lab reporting"
   thumb: /assets/thumbs/measurements.png
+  readme: true
 
 - title: Traffic Lights FSM (Proteus)
   category: logic
@@ -21,6 +23,7 @@
   outcome: Working, debounced state machine with deterministic phase timing.
   skills: FSM design, timing division, simulation, test cases
   thumb: /assets/thumbs/Traffic_Lights.png
+  readme: true
 
 - title: Rankine Cycle Studies
   category: power
@@ -29,6 +32,7 @@
   outcome: "Verified instrument class; measured R, Z, and single/three-phase power using VA, comparison/substitution, Wheatstone, 3A/3V, wattmeter & Aron; quantified uncertainty.  skills: Cycle modeling, property tables, η_th gap (ideal vs real), plots"
   skills: Calibration, Type A/B uncertainty, bridge balancing, phasors & PF, wattmeter wiring, data analysis (Python), clear lab reporting
   thumb : /assets/thumbs/Rankine.png
+  readme: true
 
 - title: Otto / Diesel / Dual
   category: power
@@ -37,3 +41,4 @@
   outcome: Quantified efficiency impact of r, γ, and heat-addition model (Otto/Diesel/Dual).
   skills: Thermo cycles, parametric sweeps, result interpretation
   thumb : /assets/thumbs/Otto_Diesel_Dual.png
+  readme: true
