@@ -1,18 +1,23 @@
 {% assign p = include.p %}
 <article class="card{% if p.is_group %} card--group{% endif %}"
-         data-cat="{{ p.category }}" data-title="{{ p.title | downcase }}" data-sub="{{ p.subtitle | downcase }}">
+         data-cat="{{ p.category | default: '' }}"
+         data-title="{{ p.title | default: '' | downcase }}"
+         data-sub="{{ p.subtitle | default: '' | downcase }}">
+
   <div class="card__thumb {% unless p.thumb %}card__thumb--empty{% endunless %}">
     {% if p.thumb and p.thumb != '' %}
-      <img src="{{ p.thumb | relative_url }}" alt="thumbnail for {{ p.title }}">
+      <img src="{{ p.thumb | relative_url }}" alt="Thumbnail — {{ p.title }}">
     {% endif %}
     <div class="card__tags">
-      <span class="tag tag--cat">{{ p.category | capitalize }}</span>
+      <span class="tag tag--cat">{{ p.category | default: '' | capitalize }}</span>
       {% if p.tags %}{% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}{% endif %}
     </div>
   </div>
+
   <div class="card__body">
     <h3 class="card__title">{{ p.title }}</h3>
     <p class="card__subtitle">{{ p.subtitle }}</p>
+
     {% if p.outcome or p.skills %}
     <p class="card__meta">
       {% if p.outcome %}<strong>Outcome:</strong> {{ p.outcome }}{% endif %}
@@ -20,12 +25,13 @@
       {% if p.skills %}<strong>Skills:</strong> {{ p.skills }}{% endif %}
     </p>
     {% endif %}
+
     <div class="card__actions">
       {%- comment -%} Primary: Repo always shown {%- endcomment -%}
       <a class="btn primary"
          href="{{ site.repo_url_base }}{% if p.path %}/{{ p.path }}{% endif %}"
-         target="_blank" rel="noopener">Repo</a>
-  
+         target="_blank" rel="noopener noreferrer">Repo</a>
+
       {%- comment -%} README: auto-build link if true/auto and path exists; else accept a URL {%- endcomment -%}
       {% assign readme_url = nil %}
       {% if p.readme %}
@@ -36,21 +42,23 @@
         {% endif %}
       {% endif %}
       {% if readme_url %}
-        <a class="btn" href="{{ readme_url }}" target="_blank" rel="noopener">README</a>
+        <a class="btn" href="{{ readme_url }}" target="_blank" rel="noopener noreferrer">README</a>
       {% endif %}
-  
+
       {%- comment -%} Report (PDF or URL) {%- endcomment -%}
       {% if p.report and p.report != '' %}
         {% assign report_href = p.report %}
         {% unless report_href contains '://' %}{% assign report_href = report_href | relative_url %}{% endunless %}
-        <a class="btn" href="{{ report_href }}" target="_blank" rel="noopener">Report</a>
+        <a class="btn" href="{{ report_href }}" target="_blank" rel="noopener noreferrer">Report</a>
       {% endif %}
-  
+
       {%- comment -%} Spanish Report (PDF or URL) {%- endcomment -%}
       {% if p.report_es and p.report_es != '' %}
         {% assign report_es_href = p.report_es %}
         {% unless report_es_href contains '://' %}{% assign report_es_href = report_es_href | relative_url %}{% endunless %}
-        <a class="btn" href="{{ report_es_href }}" target="_blank" rel="noopener">Reporte ES</a>
+        <a class="btn" href="{{ report_es_href }}" target="_blank" rel="noopener noreferrer">Reporte ES</a>
       {% endif %}
     </div>
+  </div>  {# <-- THIS was missing #}
+
 </article>
