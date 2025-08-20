@@ -99,3 +99,6 @@ html[data-theme="light"] .notice.intent{background:#f8fafc}
 .pdf-embed{height:90vh;border:1px solid var(--border);border-radius:8px;overflow:hidden}
 
 
+.footerbar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.site-footer .small.muted{opacity:.7;font-size:12px;margin:0}
+@media (max-width:600px){.footerbar{flex-direction:column;align-items:flex-start}}

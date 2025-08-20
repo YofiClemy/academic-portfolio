@@ -1,0 +1,5 @@
+{
+  "sha": "{{ site.github.build_revision | slice: 0,7 }}",
+  "built": "{{ site.time | date_to_xmlschema }}",
+  "url": "{{ site.url }}{{ site.baseurl }}/"
+}
