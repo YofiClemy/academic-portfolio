@@ -2,6 +2,11 @@
 
 <p align="center">
   <a href="https://yoficlemy.github.io/academic-portfolio/">
+    <img src="docs/assets/preview-readme.png" alt="Clément — Engineering Portfolio" width="900">
+  </a>
+</p>
+<p align="center">
+  <a href="https://yoficlemy.github.io/academic-portfolio/">
     <img alt="View Portfolio"
       src="https://img.shields.io/badge/View%20Portfolio-6AA7FF?style=for-the-badge&logo=githubpages&logoColor=white">
   </a>
