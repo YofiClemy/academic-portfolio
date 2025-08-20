@@ -6,7 +6,7 @@
          src="https://img.shields.io/badge/View%20Portfolio-6AA7FF?style=for-the-badge&logo=githubpages&logoColor=white">
   </a>
   &nbsp;&nbsp;
-  <a href="docs/assets/Clement_CV.pdf">
+  <a href="docs/assets/CV.pdf">
     <img alt="Download CV"
          src="https://img.shields.io/badge/Download%20CV-11131A?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
   </a>
