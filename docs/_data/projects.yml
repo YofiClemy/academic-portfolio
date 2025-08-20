@@ -29,8 +29,8 @@
   category: power
   path: machines/rankine-analysis
   subtitle: "Superheat vs no superheat; ideal vs real"
-  outcome: "Verified instrument class; measured R, Z, and single/three-phase power using VA, comparison/substitution, Wheatstone, 3A/3V, wattmeter & Aron; quantified uncertainty.  skills: Cycle modeling, property tables, η_th gap (ideal vs real), plots"
-  skills: Calibration, Type A/B uncertainty, bridge balancing, phasors & PF, wattmeter wiring, data analysis (Python), clear lab reporting
+  outcome: "Compared η_th and specific work across pressure/temperature/superheat cases."
+  skills: Cycle modeling, property tables, η_th gap (ideal vs real), plots.
   thumb : /assets/thumbs/Rankine.png
   readme: true
 
