@@ -3,21 +3,31 @@
 <p align="center">
   <a href="https://yoficlemy.github.io/academic-portfolio/">
     <img alt="View Portfolio"
-      src="https://img.shields.io/badge/View%20Portfolio-6AA7FF?style=for-the-badge&logo=githubpages&logoColor=white">
-<p align="center">
-  <a href="https://yoficlemy.github.io/academic-portfolio/">
-    <img src="docs/assets/preview-readme.png" alt="Clément — Engineering Portfolio" width="900">
+         src="https://img.shields.io/badge/View%20Portfolio-6AA7FF?style=for-the-badge&logo=githubpages&logoColor=white">
   </a>
-</p>
-  </a>
+  &nbsp;&nbsp;
   <a href="docs/assets/Clement_CV.pdf">
     <img alt="Download CV"
-      src="https://img.shields.io/badge/Download%20CV-11131A?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
+         src="https://img.shields.io/badge/Download%20CV-11131A?style=for-the-badge&logo=adobeacrobatreader&logoColor=white">
   </a>
 </p>
-  <p align="center">
-  [![Website status](https://img.shields.io/website?url=https%3A%2F%2Fyoficlemy.github.io%2Facademic-portfolio%2F)](https://yoficlemy.github.io/academic-portfolio/)
-  [![Pages build](https://github.com/YofiClemy/academic-portfolio/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/YofiClemy/academic-portfolio/actions/workflows/pages/pages-build-deployment)
+
+<p align="center">
+  <a href="https://yoficlemy.github.io/academic-portfolio/">
+    <img src="docs/assets/preview-readme.png" width="900" alt="Portfolio preview">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://yoficlemy.github.io/academic-portfolio/">
+    <img alt="Website status"
+         src="https://img.shields.io/website?url=https%3A%2F%2Fyoficlemy.github.io%2Facademic-portfolio%2F">
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/YofiClemy/academic-portfolio/actions/workflows/pages/pages-build-deployment">
+    <img alt="Pages build"
+         src="https://github.com/YofiClemy/academic-portfolio/actions/workflows/pages/pages-build-deployment/badge.svg">
+  </a>
 </p>
 
 - 🌐 Live site: **https://yoficlemy.github.io/academic-portfolio/**
