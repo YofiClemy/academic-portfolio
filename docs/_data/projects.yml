@@ -17,7 +17,7 @@
   skills: LTspice/Proteus, biasing & small-signal, gain/bandwidth, measurement planning
   thumb: /assets/thumbs/electronics.png
   readme: true
-  report: auto
+  report: /electronics/
   
 - title: Electrical Measurements (7 Labs)
   category: Measurements

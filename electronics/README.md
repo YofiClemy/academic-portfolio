@@ -8,33 +8,40 @@
 - **TP1 — Half-wave rectifier**
   - Built a 12 VAC half-wave rectifier. Measured waveforms at transformer, post-diode, and with reservoir capacitor. Verified load power against resistor ratings.
   - Insight: ripple is set by load current and C; diode drop and component power limits matter more than wishful thinking.
+[Report.pdf](./half-wave-rectifier/report.pdf)
 
 - **TP2 — Voltage doubler & quintuplicator (diodes)**
   - Implemented a 2x doubler and a 5x multiplier; compared no-load vs loaded outputs.
   - Insight: with more stages, output impedance skyrockets and “n×Vpk” only holds at tiny load currents.
+[Report.pdf](./diode-voltage-doubler-and-quintuplicator/report.pdf)
 
 - **TP3 — Zener clipper (dual thresholds)**
   - Symmetrical limiter targeting roughly +6.3 V / -4.6 V; tested with and without a parallel load.
   - Insight: clamp levels shift with Zener current and diode forward drop. Size the series resistor for IZ(min) and power.
+[Report.pdf](./zener-diode-clipper/report.pdf)
 
 - **TP4 — BJT Q-point**
   - Analyzed three bias topologies; placed Q using load lines; checked active/saturation/cutoff.
   - Insight: divider bias and emitter degeneration stabilize Q better than fixed bias; center Q for symmetric swing.
+[Report.pdf](./transistor-q-point-quiescent-test/report.pdf)
 
 - **TP5 — BJT amplifier (single stage)**
   - Designed CE amplifiers for target gains; swept ~20 Hz to ~3.2 MHz.
   - Results: |Av| ~ 7 for the stability-biased build; a second build ~ 18 at low frequency; roll-off follows device parasitics and bypass choices.
   - Insight: removing bypass trades gain for linearity and thermal stability.
+[Report.pdf](./bjt-amplifier/report.pdf)
 
 - **TP6 — Cascaded amplifier (two CE stages)**
   - Designed CE1 + CE2 with interstage coupling to exceed |Av| ~ 250.
   - Results: combined gain stabilized roughly **260–430** across the band; first stage ~ 24 falling to ~ 18.5 by ~200 kHz.
   - Insight: gain stacks and poles stack; interstage capacitor sizing and bias isolation matter.
+[Report.pdf](./cascaded-amplifier/report.pdf)
 
 - **TP7 — Op-amp: non-inverting amplifier + square-wave oscillator**
   - Built a non-inverting amplifier (Av ~ 20) and a relaxation oscillator (1–10 kHz).
   - Results: LM741 -3 dB ~ 50 kHz; TL081 ~ 175 kHz. Oscillator ran stably across the target range.
   - Insight: choose op-amp for GBW and slew; oscillator f ~ k/(RC) depends on hysteresis (beta) and supply rails.
+[Report.pdf](./operational-amplifier/report.pdf)
 
 ## Skills & techniques applied
 
