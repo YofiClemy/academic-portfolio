@@ -36,6 +36,7 @@
   skills: FSM design, timing division, simulation, test cases
   thumb: /assets/thumbs/Traffic_Lights.png
   readme: true
+  report: auto
 
 - title: Rankine Cycle Studies
   category: power
