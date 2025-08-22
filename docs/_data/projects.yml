@@ -7,6 +7,7 @@
   skills: Python, pandapower, pandas, matplotlib, Power systems analysis, Load-flow, IEC 60909 short-circuit, Heuristic optimization / scenario ranking, Data visualization, Reproducible pipelines
   thumb : /assets/thumbs/power-studies-feeder.png
   readme: true
+  report: auto
 
 - title: Electronics II (7 Labs)
   category: electronics
@@ -16,6 +17,7 @@
   skills: LTspice/Proteus, biasing & small-signal, gain/bandwidth, measurement planning
   thumb: /assets/thumbs/electronics.png
   readme: true
+  report: auto
   
 - title: Electrical Measurements (7 Labs)
   category: Measurements

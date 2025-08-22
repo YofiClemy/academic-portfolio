@@ -46,9 +46,16 @@
       {% endif %}
 
       {%- comment -%} Report (PDF or URL) {%- endcomment -%}
+      {% assign report_href = nil %}
       {% if p.report and p.report != '' %}
-        {% assign report_href = p.report %}
-        {% unless report_href contains '://' %}{% assign report_href = report_href | relative_url %}{% endunless %}
+        {% if p.report == true or p.report == 'auto' %}
+          {% if p.path %}{% assign report_href = p.path | append: '/report.pdf' %}{% endif %}
+        {% else %}
+          {% assign report_href = p.report %}
+        {% endif %}
+      {% endif %}
+      {% if report_href %}
+      {% unless report_href contains '://' %}{% assign report_href = report_href | relative_url %}{% endunless %}
         <a class="btn" href="{{ report_href }}" target="_blank" rel="noopener noreferrer">Report</a>
       {% endif %}
 
