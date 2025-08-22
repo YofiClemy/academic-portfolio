@@ -30,7 +30,7 @@
 
 - title: Traffic Lights FSM (Proteus)
   category: logic
-  path: logics/
+  path: logics/logic-systems-traffic-lights-in-proteus-optional-hdl-testben
   subtitle: Moore FSM + timing divider
   outcome: Working, debounced state machine with deterministic phase timing.
   skills: FSM design, timing division, simulation, test cases
