@@ -47,7 +47,7 @@ Core components (TTL):
 	•	Report: report.pdf
 	•	Data: data/
 	•	Figures: figures/
-	•	Code / Proteus project: proteus/
+	•	Code: code/Simulacion V2 - Chevauchey C.pdsprj
 
 
 ## My analysis approach
