@@ -5,7 +5,7 @@
 
 ## Report (English)
 
-[Report.pdf](/academic-portfolio/power-studies-feeder/report.pdf)
+[Report.pdf](/power-studies-feeder/report.pdf)
 
 ## Aim
 	•	Build a balanced MV feeder test network.
