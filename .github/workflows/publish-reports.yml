@@ -1,0 +1,35 @@
+name: Publish reports into docs
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**/report.pdf'
+      - '.github/workflows/publish-reports.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Mirror every report.pdf under docs/
+        run: |
+          set -euo pipefail
+          mkdir -p docs
+          # find all report.pdf outside docs/, mirror each into docs/<same path>
+          while IFS= read -r -d '' SRC; do
+            REL="${SRC#./}"                                  # strip leading ./ 
+            DEST="docs/${REL}"                               # mirror path
+            mkdir -p "$(dirname "$DEST")"
+            cp -f "$SRC" "$DEST"
+            echo "Copied: $SRC -> $DEST"
+          done < <(find . -type f -name 'report.pdf' ! -path './docs/*' -print0)
+
+      - name: Commit changes (if any)
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: docs
+          message: "chore(docs): mirror report.pdf files into docs/"
