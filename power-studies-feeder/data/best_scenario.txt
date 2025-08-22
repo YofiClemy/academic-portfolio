@@ -1,0 +1,13 @@
+BEST SCENARIO
+case: cap_1.0MVAr+rebalance_90pct
+vmin: 0.9515528091076045
+vmax: 1.03
+line_max_%: 81.67415392469702
+trafo_max_%: 90.12479860758239
+trafo_Trafo 0-1_%: 90.12479860758239
+trafo_Trafo 0-12_%: 76.63419674320254
+dtap: 0
+q_mvar: 1.0
+frac: 0.9
+cap_bus: 11.0
+rebalance_trafo_idx: 0.0
