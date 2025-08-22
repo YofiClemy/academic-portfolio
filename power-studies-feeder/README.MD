@@ -57,9 +57,10 @@ Apply the chosen action to a copy of the net, generate before/after plots, and s
 	•	Voltage profile (before/after): figures/voltage_profile__...png
 	•	Stress maps (line/trafo loading): figures/network_stress_before__...png, figures/network_stress_after__...png
 
-![Voltage profile](figures/voltage_profile__cap-1-0mvar-rebalance-90pct__YYYYMMDD-HHMMSS.png)
-![Stress map — before](figures/network_stress_before__cap-1-0mvar-rebalance-90pct__YYYYMMDD-HHMMSS.png)
-![Stress map — after](figures/network_stress_after__cap-1-0mvar-rebalance-90pct__YYYYMMDD-HHMMSS.png)
+![Voltage profile](/power-studies-feeder/figures/voltage_profile.png)
+![Stress map — before](/power-studies-feeder/figures/network_stress_before__cap-1-0mvar-rebalance-90pct__20250821-210943.png)
+![Stress map — after](/power-studies-feeder/figures/network_stress_after__cap-1-0mvar-rebalance-90pct__20250821-210943.png)
+![Voltage profile before after](figures/voltage_profile__cap-1-0mvar-rebalance-90pct__20250821-210943.png)
 
 ## Files & Artifacts
 	•	scripts/run_study.py — minimal driver (scenarios + selection).
