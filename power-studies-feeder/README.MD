@@ -1,5 +1,12 @@
 # Minimal Feeder Study — Load-Flow & Short-Circuit
 
+## Results at first glance
+![Results at first glance](/power-studies-feeder/figures/results_at_glance.png)
+
+## Report (English)
+
+/power-studies-feeder/report.pdf
+
 ## Aim
 	•	Build a balanced MV feeder test network.
 	•	Run steady-state load-flow and IEC 60909 short-circuit.

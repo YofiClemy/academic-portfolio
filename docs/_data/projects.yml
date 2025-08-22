@@ -1,7 +1,7 @@
 - title: Power studies feeder
   category: power
   path: /power-studies-feeder
-  subtitle: "Minimal MV feeder study with pandapower: load-flow + IEC 60909 short-circuit, OLTC/capacitor/rebalancing sweep, and selection of the smallest feasible fix."
+  subtitle: "MV feeder study: LF + SC + cap/rebalance sweep"
   outcome: Ran baseline LF/SC on the CIGRE MV feeder, enumerated actions (OLTC, shunt caps, targeted rebalancing), snapshotted KPIs, and auto-selected the lightest fix meeting planning limits (Vmin ≥ 0.95 pu, Vmax ≤ 1.05 pu, line/trafo ≤ 100%).
   Selected case: cap_1.0MVAr+rebalance_90pct (1.0 MVAr at bus 11, 10% load transfer on hot LV feeder). CSV summaries, stress/voltage plots, before/after network snapshots.
   skills: Python, pandapower, pandas, matplotlib, Power systems analysis, Load-flow, IEC 60909 short-circuit, Heuristic optimization / scenario ranking, Data visualization, Reproducible pipelines
