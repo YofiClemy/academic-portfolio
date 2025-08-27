@@ -21,7 +21,7 @@ jobs:
           KEEP: 3
         run: |
           set -euo pipefail
-          ids=$(gh api -X GET "repos/$REPO/deployments?environment=github-pages" --paginate -q '.[].id')
+          ids=$(gh api -X GET "repos/$REPO/deployments?environment=github-pages" --paginate -q '.[].id' | tac)
           i=0
           for id in $ids; do
             i=$((i+1))
