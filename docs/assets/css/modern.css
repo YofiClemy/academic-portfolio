@@ -49,6 +49,13 @@ html[data-theme="dark"]{
 body{background:var(--bg);color:var(--text)}
 a{color:var(--brand)}
 
+:root{
+  --container: 1280px;
+}
+@media (min-width: 1536px){
+  :root{ --container: 1400px; }  /* optional: a bit wider on very large screens */
+}
+
 /* Header (minima) */
 .site-header{background:var(--header-bg);border-bottom:1px solid var(--header-border)}
 .site-title, .site-title a{color:var(--header-fg) !important}
@@ -102,6 +109,9 @@ html[data-theme="light"] .tag{background:#eef2ff;border-color:#c7d2fe;color:#1e3
 }
 .notice.intent .sep{opacity:.6;margin:0 8px}
 html[data-theme="light"] .notice.intent{background:#f8fafc}
+
+/* Override Minima’s content width */
+.wrapper{ max-width: var(--container) !important; }
 
 /* Hide Minima's default page heading if present */
 .page-heading{display:none}
