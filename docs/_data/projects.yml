@@ -9,6 +9,14 @@
   readme: true
   report: auto
 
+- title: PlantWeb (CS50 Final)
+  category: web
+  path: https://yoficlemy.github.io/Final-Project-CS50/
+  subtitle: Full-stack course project
+  outcome: Built, documented, and demoed a working web app as my CS50 final project.
+  skills: CS50, Python/JS, web app design, documentation, demos
+  thumb: /assets/thumbs/plantweb.png
+
 - title: Electronics II (7 Labs)
   category: electronics
   path: electronics/
