@@ -27,25 +27,31 @@
     {% endif %}
 
     <div class="card__actions">
-      {%- comment -%} Build repo href from either full URL or relative path {%- endcomment -%}
+      {%- comment -%} Repo (works with relative path or absolute URL) {%- endcomment -%}
       {% assign repo_href = nil %}
       {% if p.path %}
         {% assign repo_href = p.path %}
-        {%- comment -%} If it's NOT an absolute URL, prefix with site.repo_url_base {%- endcomment -%}
         {% unless repo_href contains '://' %}
           {% assign repo_href = site.repo_url_base | append: '/' | append: repo_href %}
         {% endunless %}
       {% endif %}
+      {% if repo_href %}
+        <a class="btn primary"
+           href="{{ repo_href }}"
+           target="_blank" rel="noopener noreferrer">Repo</a>
+      {% endif %}
 
-      <a class="btn primary"
-        href="{{ repo_href }}"
-        target="_blank" rel="noopener noreferrer">Repo</a>
-
-      {%- comment -%} README: auto-build link if true/auto and path exists; else accept a URL {%- endcomment -%}
+      {%- comment -%} README (auto for relative path, or use provided URL) {%- endcomment -%}
       {% assign readme_url = nil %}
       {% if p.readme %}
         {% if p.readme == true or p.readme == 'auto' %}
-          {% if p.path %}{% assign readme_url = site.repo_url_base | append: '/' | append: p.path | append: '#readme' %}{% endif %}
+          {% if p.path %}
+            {% if p.path contains '://' %}
+              {% assign readme_url = p.path | append: '#readme' %}
+            {% else %}
+              {% assign readme_url = site.repo_url_base | append: '/' | append: p.path | append: '#readme' %}
+            {% endif %}
+          {% endif %}
         {% else %}
           {% assign readme_url = p.readme %}
         {% endif %}
@@ -54,17 +60,21 @@
         <a class="btn" href="{{ readme_url }}" target="_blank" rel="noopener noreferrer">README</a>
       {% endif %}
 
-      {%- comment -%} Report (PDF or URL) {%- endcomment -%}
+      {%- comment -%} Report (PDF or URL). Auto only for site-relative p.path -> /<path>/report.pdf {%- endcomment -%}
       {% assign report_href = nil %}
       {% if p.report and p.report != '' %}
         {% if p.report == true or p.report == 'auto' %}
-          {% if p.path %}{% assign report_href = p.path | append: '/report.pdf' %}{% endif %}
+          {% if p.path and p.path contains '://' %}
+            {# Skip auto for absolute paths #}
+          {% elsif p.path %}
+            {% assign report_href = '/' | append: p.path | append: '/report.pdf' %}
+          {% endif %}
         {% else %}
           {% assign report_href = p.report %}
         {% endif %}
       {% endif %}
       {% if report_href %}
-      {% unless report_href contains '://' %}{% assign report_href = report_href | relative_url %}{% endunless %}
+        {% unless report_href contains '://' %}{% assign report_href = report_href | relative_url %}{% endunless %}
         <a class="btn" href="{{ report_href }}" target="_blank" rel="noopener noreferrer">Report</a>
       {% endif %}
 
@@ -76,5 +86,4 @@
       {% endif %}
     </div>
   </div>
-
 </article>
