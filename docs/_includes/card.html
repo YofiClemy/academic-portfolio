@@ -26,11 +26,19 @@
     </p>
     {% endif %}
 
-    <div class="card__actions">
-      {%- comment -%} Primary: Repo always shown {%- endcomment -%}
-      <a class="btn primary"
-         href="{{ site.repo_url_base }}{% if p.path %}/{{ p.path }}{% endif %}"
-         target="_blank" rel="noopener noreferrer">Repo</a>
+    {%- comment -%} Build repo href from either full URL or relative path {%- endcomment -%}
+    {% assign repo_href = nil %}
+    {% if p.path %}
+      {% assign repo_href = p.path %}
+      {%- comment -%} If it's NOT an absolute URL, prefix with site.repo_url_base {%- endcomment -%}
+      {% unless repo_href contains '://' %}
+        {% assign repo_href = site.repo_url_base | append: '/' | append: repo_href %}
+      {% endunless %}
+    {% endif %}
+
+    <a class="btn primary"
+      href="{{ repo_href }}"
+      target="_blank" rel="noopener noreferrer">Repo</a>
 
       {%- comment -%} README: auto-build link if true/auto and path exists; else accept a URL {%- endcomment -%}
       {% assign readme_url = nil %}
