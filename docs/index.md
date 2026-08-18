@@ -1203,7 +1203,7 @@ title: ""
           Explore my work ↓
         </a>
 
-        <a href="#cv" class="btn btn--secondary">
+        <a href="#experience" class="btn btn--secondary">
           View CV
         </a>
 
