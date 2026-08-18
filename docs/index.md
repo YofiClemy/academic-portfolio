@@ -139,102 +139,7 @@ html {
 }
 
 
-/* =========================================================
-   PORTFOLIO NAVIGATION
-========================================================= */
 
-.portfolio-nav {
-  position: sticky;
-
-  top: 12px;
-
-  z-index: 50;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 24px;
-
-  width: calc(100% - 32px);
-  max-width: 930px;
-
-  margin: 0 auto 18px;
-
-  padding:
-    8px
-    10px
-    8px
-    16px;
-
-  border:
-    1px solid
-    rgba(220, 228, 237, .82);
-
-  border-radius: 16px;
-
-  background:
-    rgba(255, 255, 255, .84);
-
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-
-  box-shadow:
-    0 8px 32px
-    rgba(7, 22, 38, .08);
-}
-
-
-.portfolio-nav__brand {
-  color: var(--pf-navy) !important;
-
-  font-size: 1.05rem;
-  font-weight: 850;
-
-  letter-spacing: -.05em;
-
-  text-decoration: none !important;
-}
-
-
-.portfolio-nav__brand span {
-  color: var(--pf-blue);
-}
-
-
-.portfolio-nav__links {
-  display: flex;
-  align-items: center;
-
-  gap: 3px;
-}
-
-
-.portfolio-nav__links a {
-  padding:
-    8px
-    10px;
-
-  border-radius: 9px;
-
-  color: #5d6979 !important;
-
-  font-size: .77rem;
-  font-weight: 680;
-
-  text-decoration: none !important;
-
-  transition:
-    color .15s ease,
-    background .15s ease;
-}
-
-
-.portfolio-nav__links a:hover {
-  background: #f0f4f8;
-
-  color: var(--pf-navy) !important;
-}
 
 
 /* =========================================================
@@ -1926,27 +1831,6 @@ html {
   }
 
 
-  .portfolio-nav {
-    top: 7px;
-
-    width:
-      calc(100% - 14px);
-
-    padding-left: 13px;
-  }
-
-
-  .portfolio-nav__links a {
-    display: none;
-  }
-
-
-  .portfolio-nav__links
-  a:last-child {
-    display: block;
-  }
-
-
   .portfolio-hero {
     min-height: auto;
 
@@ -2043,48 +1927,6 @@ html {
 <div class="portfolio-page">
 
 
-<!-- ======================================================
-     NAVIGATION
-======================================================= -->
-
-<nav
-  class="portfolio-nav"
-  aria-label="Portfolio navigation"
->
-
-  <a
-    class="portfolio-nav__brand"
-    href="#"
-  >
-    CC<span>.</span>
-  </a>
-
-
-  <div class="portfolio-nav__links">
-
-    <a href="#about">
-      Profile
-    </a>
-
-    <a href="#projects">
-      Projects
-    </a>
-
-    <a href="#experience">
-      Experience
-    </a>
-
-    <a href="#cv">
-      CV
-    </a>
-
-    <a href="#contact">
-      Contact
-    </a>
-
-  </div>
-
-</nav>
 
 
 <!-- ======================================================
