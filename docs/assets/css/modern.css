@@ -116,8 +116,27 @@ html[data-theme="light"] .notice.intent{background:#f8fafc}
 /* Hide Minima's default page heading if present */
 .page-heading{display:none}
 
-.pdf-embed{height:90vh;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.pdf-embed {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 210 / 297; /* A4 */
+  margin: 24px auto 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
 
+.pdf-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.pdf-download {
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
 
 .footerbar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
 .site-footer .small.muted{opacity:.7;font-size:12px;margin:0}
