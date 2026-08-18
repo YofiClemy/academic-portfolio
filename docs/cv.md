@@ -3,12 +3,6 @@ layout: page
 title: "CV"
 permalink: /cv/
 ---
-### Summary
-
-- **Targets:** Power systems studies (load-flow/SC), protection basics, PLC/SCADA.
-- **Where:** France/EU/ARG (open to remote).
-- **Tools:** PowerFactory (LF/SC), Python (NumPy/Pandas/Matplotlib), LTspice/Proteus, TIA Portal basics.
-- **Languages:** French (native), Spanish (C1), English (C1).
 
 {% assign cv_en = '/assets/CV English.pdf' | relative_url %}
 {% assign cv_es = '/assets/CV spanish.pdf' | relative_url %}
