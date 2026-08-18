@@ -1229,6 +1229,8 @@ html[data-theme="dark"] .portfolio-page .card__thumb--empty {
 .portfolio-page .card__tags {
   position: absolute;
 
+  top: auto;
+
   left: 12px;
   right: 12px;
   bottom: 12px;
@@ -1236,12 +1238,26 @@ html[data-theme="dark"] .portfolio-page .card__thumb--empty {
   display: flex;
   flex-wrap: wrap;
 
+  align-items: flex-start;
+  align-content: flex-start;
+
   gap: 5px;
+
+  height: auto;
 }
 
 .portfolio-page .tag {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: max-content;
+  height: auto;
+
   padding:
-    5px 8px;
+    5px
+    8px;
 
   border:
     1px solid rgba(255, 255, 255, .22);
@@ -1251,8 +1267,7 @@ html[data-theme="dark"] .portfolio-page .card__thumb--empty {
   background:
     rgba(4, 17, 29, .73);
 
-  backdrop-filter:
-    blur(8px);
+  backdrop-filter: blur(8px);
 
   color: #f2f7fb;
 
@@ -1260,6 +1275,10 @@ html[data-theme="dark"] .portfolio-page .card__thumb--empty {
   font-weight: 720;
 
   line-height: 1;
+
+  white-space: nowrap;
+
+  flex: 0 0 auto;
 }
 
 .portfolio-page .tag--cat {
