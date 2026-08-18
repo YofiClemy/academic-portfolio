@@ -71,7 +71,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
-
-<p class="pdf-download">
-  <a href="{{ cv_es }}" target="_blank">Download Spanish PDF</a>
-</p>
