@@ -10,48 +10,49 @@ title: ""
 ========================================================= */
 
 :root {
-  --pf-bg: #f5f7fb;
+  --pf-bg: #ffffff;
   --pf-surface: #ffffff;
-  --pf-surface-soft: #eef3f9;
+  --pf-surface-soft: #f8fbff;
 
   --pf-navy: #071626;
   --pf-navy-2: #0b2036;
   --pf-blue: #1464f4;
   --pf-cyan: #37c5e8;
 
-  --pf-text: #102033;
-  --pf-muted: #627083;
-  --pf-border: #dce4ed;
+  --pf-text: #0f1f33;
+  --pf-muted: #5d6b7c;
+  --pf-border: #e5ebf2;
 
-  --pf-item-bg: #fbfcfe;
-  --pf-project-bg: rgba(255, 255, 255, .58);
+  --pf-item-bg: #f9fbfe;
+  --pf-project-bg: #ffffff;
 
   --pf-card-meta-border: #edf1f5;
-  --pf-card-meta: #768294;
-  --pf-card-meta-strong: #4c5968;
+  --pf-card-meta: #6e7b8d;
+  --pf-card-meta-strong: #465467;
 
-  --pf-small-button-bg: #f8fafc;
-  --pf-small-button-text: #435268;
-  --pf-small-button-hover: #f2f6fa;
+  --pf-small-button-bg: #f7faff;
+  --pf-small-button-text: #405168;
+  --pf-small-button-hover: #eef5ff;
 
-  --pf-badge-bg: rgba(20, 100, 244, .07);
+  --pf-badge-bg: #edf4ff;
   --pf-badge-text: #155acb;
 
-  --pf-contact-button-bg: #f6f8fb;
-  --pf-contact-button-text: #4c5968;
+  --pf-contact-button-bg: #f7faff;
+  --pf-contact-button-text: #465467;
 
-  --pf-empty-border: #cbd5e0;
-  --pf-page-glow: rgba(20, 100, 244, .05);
+  --pf-empty-border: #d7e0ea;
+
+  --pf-page-glow: rgba(20, 100, 244, .035);
 
   --pf-radius-sm: 12px;
   --pf-radius: 20px;
   --pf-radius-lg: 30px;
 
   --pf-shadow:
-    0 18px 50px rgba(16, 32, 51, .08);
+    0 16px 45px rgba(16, 32, 51, .06);
 
   --pf-shadow-hover:
-    0 24px 60px rgba(16, 32, 51, .14);
+    0 22px 55px rgba(16, 32, 51, .11);
 }
 
 
@@ -60,41 +61,52 @@ title: ""
 ========================================================= */
 
 html[data-theme="light"] {
-  --pf-bg: #f5f7fb;
+  --pf-bg: #ffffff;
   --pf-surface: #ffffff;
-  --pf-surface-soft: #eef3f9;
+  --pf-surface-soft: #f8fbff;
 
-  --pf-text: #102033;
-  --pf-muted: #627083;
-  --pf-border: #dce4ed;
+  --pf-text: #0f1f33;
+  --pf-muted: #5d6b7c;
+  --pf-border: #e5ebf2;
 
-  --pf-item-bg: #fbfcfe;
-  --pf-project-bg: rgba(255, 255, 255, .58);
+  --pf-item-bg: #f9fbfe;
+
+  --pf-project-bg: #ffffff;
 
   --pf-card-meta-border: #edf1f5;
-  --pf-card-meta: #768294;
-  --pf-card-meta-strong: #4c5968;
+  --pf-card-meta: #6e7b8d;
+  --pf-card-meta-strong: #465467;
 
-  --pf-small-button-bg: #f8fafc;
-  --pf-small-button-text: #435268;
-  --pf-small-button-hover: #f2f6fa;
+  --pf-small-button-bg: #f7faff;
+  --pf-small-button-text: #405168;
+  --pf-small-button-hover: #eef5ff;
 
-  --pf-badge-bg: rgba(20, 100, 244, .07);
+  --pf-badge-bg: #edf4ff;
   --pf-badge-text: #155acb;
 
-  --pf-contact-button-bg: #f6f8fb;
-  --pf-contact-button-text: #4c5968;
+  --pf-contact-button-bg: #f7faff;
+  --pf-contact-button-text: #465467;
 
-  --pf-empty-border: #cbd5e0;
-  --pf-page-glow: rgba(20, 100, 244, .05);
+  --pf-empty-border: #d7e0ea;
+
+  --pf-page-glow: rgba(20, 100, 244, .035);
 
   --pf-shadow:
-    0 18px 50px rgba(16, 32, 51, .08);
+    0 16px 45px rgba(16, 32, 51, .06);
 
   --pf-shadow-hover:
-    0 24px 60px rgba(16, 32, 51, .14);
+    0 22px 55px rgba(16, 32, 51, .11);
 }
 
+html[data-theme="light"] .projects-section {
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(20, 100, 244, .04),
+      transparent 28rem
+    ),
+    #ffffff;
+}
 
 /* =========================================================
    DARK THEME
