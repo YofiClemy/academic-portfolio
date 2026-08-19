@@ -1,1 +1,814 @@
+en:
 
+  hero:
+
+    eyebrow: "Power Systems · Automation · Engineering Computing"
+
+    title:
+      first: "Clément"
+      last: "Chevauchey"
+
+    heading:
+      before: "Electrical Engineering student focused on"
+      highlight: "Power Systems & Industrial Automation."
+
+    intro: >
+      Exploring power-system analysis, protection,
+      automation and electrical measurements through
+      simulation, programming and hands-on engineering
+      projects.
+
+    buttons:
+      projects: "Explore projects"
+      cv: "View CV"
+      github: "GitHub ↗"
+
+    availability: >
+      Open to 2026–27 internships and entry-level
+      opportunities in Argentina and remotely.
+
+
+  technical:
+
+    label: "Technical snapshot"
+
+    headline: "Power + Automation"
+
+    power:
+      title: "Power systems"
+      value: "DIgSILENT PowerFactory · Load Flow · Short Circuit"
+
+    automation:
+      title: "Automation"
+      value: "PLC / SCADA · TIA Portal fundamentals"
+
+    simulation:
+      title: "Simulation"
+      value: "LTspice · Proteus · MATLAB / Scilab"
+
+    computing:
+      title: "Engineering computing"
+      value: "Python · NumPy · Pandas · Matplotlib"
+
+
+
+  about:
+
+    kicker: "Profile"
+
+    title: "Engineering theory applied to practical problems."
+
+    intro: >
+      My portfolio brings together university work,
+      independent projects and technical experimentation
+      across electrical engineering.
+
+    paragraphs:
+
+      - >
+        I am an Electrical Engineering student developing
+        my profile around electrical networks, power-system
+        analysis and industrial automation.
+
+      - >
+        I am particularly interested in load-flow and
+        short-circuit studies, protection fundamentals,
+        PLC/SCADA systems and the use of engineering
+        software to analyse real electrical systems.
+
+      - >
+        My projects combine circuit theory, simulation,
+        measurements and programming using tools including
+        DIgSILENT PowerFactory, Python, LTspice, Proteus
+        and MATLAB/Scilab.
+
+
+
+  focus:
+
+    title: "Current technical focus"
+
+    power:
+
+      title: "Power Systems"
+
+      text: "Load flow · fault studies · networks"
+
+
+    protection:
+
+      title: "Protection"
+
+      text: "Fault analysis · protection fundamentals"
+
+
+    automation:
+
+      title: "Industrial Automation"
+
+      text: "PLC · SCADA · industrial control"
+
+
+    computing:
+
+      title: "Engineering Computing"
+
+      text: "Python · simulation · data analysis"
+
+
+
+  projects:
+
+    kicker: "Selected work"
+
+    title: "Engineering projects."
+
+    description: >
+      Academic and personal projects covering power systems,
+      electronics, measurements, simulation and automation.
+
+    count: "projects"
+
+
+    search:
+
+      placeholder: "Search by project, skill or technology…"
+
+      label: "Search projects"
+
+
+    categories:
+
+      all: "All"
+
+      power: "Power Systems"
+
+      electronics: "Electronics"
+
+      measurements: "Measurements"
+
+      logic: "Automation / Logic"
+
+
+    empty: "No projects match your search."
+
+
+
+
+
+es:
+
+  hero:
+
+    eyebrow: "Sistemas Eléctricos · Automatización · Computación aplicada"
+
+    title:
+
+      first: "Clément"
+
+      last: "Chevauchey"
+
+
+    heading:
+
+      before: "Estudiante de Ingeniería Eléctrica enfocado en"
+
+      highlight: "Sistemas Eléctricos y Automatización Industrial."
+
+
+    intro: >
+      Explorando el análisis de sistemas eléctricos,
+      protecciones, automatización y mediciones eléctricas
+      mediante simulación, programación y proyectos
+      prácticos de ingeniería.
+
+
+    buttons:
+
+      projects: "Ver proyectos"
+
+      cv: "Ver CV"
+
+      github: "GitHub ↗"
+
+
+    availability: >
+      Disponible para pasantías 2026–27 y oportunidades
+      profesionales iniciales en Argentina y modalidad remota.
+
+
+
+  technical:
+
+    label: "Resumen técnico"
+
+    headline: "Energía + Automatización"
+
+
+    power:
+
+      title: "Sistemas eléctricos"
+
+      value: "DIgSILENT PowerFactory · Flujo de carga · Cortocircuitos"
+
+
+    automation:
+
+      title: "Automatización"
+
+      value: "PLC / SCADA · Fundamentos de TIA Portal"
+
+
+    simulation:
+
+      title: "Simulación"
+
+      value: "LTspice · Proteus · MATLAB / Scilab"
+
+
+    computing:
+
+      title: "Computación aplicada"
+
+      value: "Python · NumPy · Pandas · Matplotlib"
+
+
+
+
+  about:
+
+    kicker: "Perfil"
+
+    title: "Teoría de ingeniería aplicada a problemas reales."
+
+
+    intro: >
+      Mi portfolio reúne trabajos universitarios,
+      proyectos independientes y experimentación técnica
+      dentro del campo de la ingeniería eléctrica.
+
+
+    paragraphs:
+
+
+      - >
+        Soy estudiante de Ingeniería Eléctrica desarrollando
+        mi perfil alrededor de redes eléctricas,
+        análisis de sistemas de potencia y automatización industrial.
+
+
+      - >
+        Mis principales intereses incluyen estudios de flujo
+        de carga y cortocircuito, fundamentos de protección,
+        sistemas PLC/SCADA y el uso de herramientas de
+        ingeniería para analizar sistemas eléctricos reales.
+
+
+      - >
+        Mis proyectos combinan teoría de circuitos,
+        simulación, mediciones y programación utilizando
+        herramientas como DIgSILENT PowerFactory, Python,
+        LTspice, Proteus y MATLAB/Scilab.
+
+
+
+
+  focus:
+
+    title: "Enfoque técnico actual"
+
+
+    power:
+
+      title: "Sistemas Eléctricos"
+
+      text: "Flujo de carga · fallas · redes eléctricas"
+
+
+    protection:
+
+      title: "Protecciones"
+
+      text: "Análisis de fallas · fundamentos de protección"
+
+
+    automation:
+
+      title: "Automatización Industrial"
+
+      text: "PLC · SCADA · control industrial"
+
+
+    computing:
+
+      title: "Computación aplicada"
+
+      text: "Python · simulación · análisis de datos"
+
+
+
+
+  projects:
+
+    kicker: "Trabajos seleccionados"
+
+    title: "Proyectos de ingeniería."
+
+
+    description: >
+      Proyectos académicos y personales relacionados con
+      sistemas eléctricos, electrónica, mediciones,
+      simulación y automatización.
+
+
+    count: "proyectos"
+
+
+    search:
+
+      placeholder: "Buscar por proyecto, habilidad o tecnología…"
+
+      label: "Buscar proyectos"
+
+
+    categories:
+
+      all: "Todos"
+
+      power: "Sistemas eléctricos"
+
+      electronics: "Electrónica"
+
+      measurements: "Mediciones"
+
+      logic: "Automatización / Lógica"
+
+
+    empty: "No hay proyectos que coincidan con la búsqueda."
+
+  experience:
+
+    kicker: "Background"
+
+    title: "Education & experience."
+
+
+    education:
+
+      title: "Electrical Engineering"
+
+      institution: "Universidad Nacional de Santiago del Estero"
+
+      year: "3rd year"
+
+      gpa: "GPA 8.1 / 10"
+
+      description: >
+        Engineering studies covering circuit analysis,
+        electromagnetics, electronics, electrical systems,
+        mathematics, physics and engineering computation.
+
+
+
+    teaching:
+
+      title: "Undergraduate Teaching Assistant"
+
+      institution: "Universidad Nacional de Santiago del Estero"
+
+
+      bullets:
+
+        - >
+          Taught algorithms and pseudocode with PSeInt
+          and scientific programming with Scilab to
+          engineering students.
+
+
+        - >
+          Taught Microsoft Word, Excel and Access to
+          students in scientific degree programmes,
+          including Biotechnology and Chemistry.
+
+
+        - >
+          Combined theory with hands-on exercises to
+          strengthen problem-solving skills for
+          approximately 120 students per year.
+
+
+
+    tutor:
+
+      title: "Private Academic Tutor"
+
+      institution: "Freelance"
+
+
+      description: >
+        Provided individual tutoring in English, French,
+        Mathematics and Science to secondary-school students,
+        with a focus on study methods, problem solving and
+        academic support.
+
+
+
+  certifications:
+
+
+    kicker: "Additional training"
+
+
+    title: "Certifications"
+
+
+
+    cambridge:
+
+      title: "C1 Advanced"
+
+      issuer: "Cambridge English"
+
+      badges:
+
+        - "Grade A"
+
+        - "CEFR C2"
+
+
+      description: >
+        Cambridge C1 Advanced qualification awarded
+        Grade A, corresponding to CEFR Level C2.
+
+
+
+
+    cs50:
+
+      title: "CS50x: Introduction to Computer Science"
+
+      issuer: "Harvard University"
+
+
+      badges:
+
+        - "C"
+
+        - "Python"
+
+        - "SQL"
+
+        - "HTML/CSS"
+
+        - "JavaScript"
+
+
+      description: >
+        Computer science fundamentals including algorithms,
+        data structures, memory, databases and web development,
+        culminating in an independent final project.
+
+
+
+
+    r:
+
+      title: "R for Research"
+
+      issuer: "CONICET"
+
+
+      badges:
+
+        - "20 hours"
+
+        - "R"
+
+        - "Data analysis"
+
+
+      description: >
+        Applied R to research-oriented data analysis through
+        practical case studies and problem solving.
+
+
+
+
+
+  cv:
+
+
+    kicker: "Curriculum Vitae"
+
+
+    title: "Prefer the conventional version?"
+
+
+    description:
+      "My CV is available in English and Spanish."
+
+
+    english:
+      "English CV ↗"
+
+
+    spanish:
+      "CV en Español ↗"
+
+
+
+
+
+  contact:
+
+
+    kicker: "Contact"
+
+
+    title: "Let's build something useful."
+
+
+    description: >
+      I am interested in internships and entry-level
+      opportunities in power systems, industrial automation,
+      electrical analysis and measurement.
+
+
+    email:
+      "Email me"
+
+
+    linkedin:
+      "LinkedIn ↗"
+
+
+    github:
+      "GitHub ↗"
+
+
+
+
+
+# ======================================================
+# SPANISH
+# ======================================================
+
+
+es:
+
+
+  experience:
+
+
+    kicker: "Experiencia"
+
+
+    title: "Educación y experiencia."
+
+
+
+    education:
+
+
+      title: "Ingeniería Eléctrica"
+
+
+      institution: "Universidad Nacional de Santiago del Estero"
+
+
+      year: "3.º año"
+
+
+      gpa: "Promedio 8,1 / 10"
+
+
+      description: >
+        Formación en análisis de circuitos,
+        electromagnetismo, electrónica, sistemas eléctricos,
+        matemáticas, física y computación aplicada
+        a la ingeniería.
+
+
+
+
+
+    teaching:
+
+
+      title: "Ayudante alumno universitario"
+
+
+      institution: "Universidad Nacional de Santiago del Estero"
+
+
+
+      bullets:
+
+
+        - >
+          Enseñanza de algoritmos y pseudocódigo mediante
+          PSeInt y programación científica con Scilab
+          para estudiantes de ingeniería.
+
+
+        - >
+          Enseñanza de Microsoft Word, Excel y Access
+          a estudiantes de carreras científicas,
+          incluyendo Biotecnología y Química.
+
+
+        - >
+          Integración de teoría y ejercicios prácticos
+          para fortalecer la resolución de problemas
+          de aproximadamente 120 estudiantes por año.
+
+
+
+
+
+    tutor:
+
+
+      title: "Tutor académico particular"
+
+
+      institution: "Freelance"
+
+
+
+      description: >
+        Clases particulares de inglés, francés,
+        matemática y ciencias para estudiantes secundarios,
+        con enfoque en métodos de estudio,
+        resolución de problemas y acompañamiento académico.
+
+
+
+
+
+  certifications:
+
+
+    kicker: "Formación adicional"
+
+
+    title: "Certificaciones"
+
+
+
+
+
+    cambridge:
+
+
+      title: "C1 Advanced"
+
+
+      issuer: "Cambridge English"
+
+
+      badges:
+
+
+        - "Grade A"
+
+
+        - "CEFR C2"
+
+
+
+      description: >
+        Certificación Cambridge C1 Advanced obtenida
+        con Grade A, equivalente al nivel C2 del MCER.
+
+
+
+
+
+    cs50:
+
+
+      title: "CS50x: Introducción a la Ciencia de la Computación"
+
+
+      issuer: "Universidad de Harvard"
+
+
+
+      badges:
+
+
+        - "C"
+
+
+        - "Python"
+
+
+        - "SQL"
+
+
+        - "HTML/CSS"
+
+
+        - "JavaScript"
+
+
+
+      description: >
+        Fundamentos de ciencias de la computación,
+        incluyendo algoritmos, estructuras de datos,
+        memoria, bases de datos y desarrollo web,
+        finalizando con un proyecto independiente.
+
+
+
+
+
+    r:
+
+
+      title: "R para Investigación"
+
+
+      issuer: "CONICET"
+
+
+
+      badges:
+
+
+        - "20 horas"
+
+
+        - "R"
+
+
+        - "Análisis de datos"
+
+
+
+      description: >
+        Aplicación del lenguaje R para análisis de datos
+        orientado a investigación mediante casos prácticos
+        y resolución de problemas.
+
+
+
+
+
+  cv:
+
+
+    kicker: "Currículum Vitae"
+
+
+    title: "¿Preferís la versión tradicional?"
+
+
+    description:
+      "Mi CV está disponible en inglés y español."
+
+
+    english:
+      "CV en Inglés ↗"
+
+
+    spanish:
+      "CV en Español ↗"
+
+
+
+
+
+  contact:
+
+
+    kicker: "Contacto"
+
+
+    title: "Construyamos algo útil."
+
+
+
+    description: >
+      Estoy interesado en pasantías y oportunidades
+      profesionales iniciales en sistemas eléctricos,
+      automatización industrial, análisis eléctrico
+      y mediciones.
+
+
+
+
+
+    email:
+      "Enviar email"
+
+
+
+    linkedin:
+      "LinkedIn ↗"
+
+
+
+    github:
+      "GitHub ↗"
