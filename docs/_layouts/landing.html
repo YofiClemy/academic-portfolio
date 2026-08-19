@@ -74,25 +74,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  /*
-    Redirect automatically
-    if preference exists
-  */
-
-  if (savedLanguage === "es" && !isSpanish) {
-
-    window.location.href =
-      "{{ '/es/' | relative_url }}";
-
+  const currentPath = window.location.pathname;
+  
+  const savedLanguage = localStorage.getItem("language");
+  
+  
+  if (!savedLanguage) {
+    return;
   }
-
-
-  if (savedLanguage === "en" && isSpanish) {
-
-    window.location.href =
-      "{{ '/' | relative_url }}";
-
+  
+  
+  // only redirect from the root page
+  // never override manual language switching
+  
+  if (
+    currentPath.endsWith("/academic-portfolio/") &&
+    savedLanguage === "es"
+  ) {
+    window.location.href = "/academic-portfolio/es/";
   }
+  
+  
+  });
 
 
 
