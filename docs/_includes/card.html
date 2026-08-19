@@ -1,89 +1,95 @@
-{% assign p = include.p %}
-<article class="card{% if p.is_group %} card--group{% endif %}"
-         data-cat="{{ p.category | default: '' }}"
-         data-title="{{ p.title | default: '' | downcase }}"
-         data-sub="{{ p.subtitle | default: '' | downcase }}">
+{% raw %}{% assign p = include.p %}
+{% assign lang = include.lang | default: page.lang | default: 'en' %}
+{% assign L = site.data.i18n[lang] | default: site.data.i18n.en %}
+{% assign title = include.title | default: p.title %}
+{% assign subtitle = include.subtitle | default: p.subtitle %}{% endraw %}
 
-  <div class="card__thumb {% unless p.thumb %}card__thumb--empty{% endunless %}">
-    {% if p.thumb and p.thumb != '' %}
-      <img src="{{ p.thumb | relative_url }}" alt="Thumbnail — {{ p.title }}">
-    {% endif %}
+<article class="card{% raw %}{% if p.is_group %} card--group{% endif %}{% endraw %}"
+         data-cat="{{ p.category | default: '' }}"
+         data-title="{{ title | default: '' | downcase }}"
+         data-sub="{{ subtitle | default: '' | downcase }}">
+
+  <div class="card__thumb {% raw %}{% unless p.thumb %}card__thumb--empty{% endunless %}{% endraw %}">
+    {% raw %}{% if p.thumb and p.thumb != '' %}{% endraw %}
+      <img src="{{ p.thumb | relative_url }}" alt="Thumbnail — {{ title }}">
+    {% raw %}{% endif %}{% endraw %}
     <div class="card__tags">
       <span class="tag tag--cat">{{ p.category | default: '' | capitalize }}</span>
-      {% if p.tags %}{% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}{% endif %}
+      {% raw %}{% if p.tags %}{% for t in p.tags %}{% endraw %}<span class="tag">{{ t }}</span>{% raw %}{% endfor %}{% endif %}{% endraw %}
     </div>
   </div>
 
   <div class="card__body">
-    <h3 class="card__title">{{ p.title }}</h3>
-    <p class="card__subtitle">{{ p.subtitle }}</p>
+    <h3 class="card__title">{{ title }}</h3>
+    <p class="card__subtitle">{{ subtitle }}</p>
 
-    {% if p.outcome or p.skills %}
+    {% raw %}{% if p.outcome or p.skills %}{% endraw %}
     <p class="card__meta">
-      {% if p.outcome %}<strong>Outcome:</strong> {{ p.outcome }}{% endif %}
-      {% if p.outcome and p.skills %} · {% endif %}
-      {% if p.skills %}<strong>Skills:</strong> {{ p.skills }}{% endif %}
+      {% raw %}{% if p.outcome %}{% endraw %}
+      <strong>{{ L.card.outcome_label }}</strong> {{ p.outcome }}
+      {% raw %}{% endif %}{% endraw %}
+      {% raw %}{% if p.outcome and p.skills %} · {% endif %}{% endraw %}
+      {% raw %}{% if p.skills %}{% endraw %}
+      <strong>{{ L.card.skills_label }}</strong> {{ p.skills }}
+      {% raw %}{% endif %}
     </p>
-    {% endif %}
+    {% raw %}{% endif %}{% endraw %}
 
     <div class="card__actions">
-      {%- comment -%} Repo (works with relative path or absolute URL) {%- endcomment -%}
-      {% assign repo_href = nil %}
-      {% if p.path %}
-        {% assign repo_href = p.path %}
-        {% unless repo_href contains '://' %}
-          {% assign repo_href = site.repo_url_base | append: '/' | append: repo_href %}
-        {% endunless %}
-      {% endif %}
-      {% if repo_href %}
-        <a class="btn primary"
-           href="{{ repo_href }}"
-           target="_blank" rel="noopener noreferrer">Repo</a>
-      {% endif %}
+      {% raw %}{% comment %} Repo (works with relative path or absolute URL) {% endcomment %}{% endraw %}
+      {% raw %}{% assign repo_href = nil %}{% endraw %}
+      {% raw %}{% if p.path %}{% endraw %}
+        {% raw %}{% assign repo_href = p.path %}{% endraw %}
+        {% raw %}{% unless repo_href contains '://' %}{% endraw %}
+          {% raw %}{% assign repo_href = site.repo_url_base | append: '/' | append: repo_href %}{% endraw %}
+        {% raw %}{% endunless %}{% endraw %}
+      {% raw %}{% endif %}{% endraw %}
+      {% raw %}{% if repo_href %}{% endraw %}
+        <a class="btn primary" href="{{ repo_href }}" target="_blank" rel="noopener noreferrer">{{ L.card.repo_btn }}</a>
+      {% raw %}{% endif %}{% endraw %}
 
-      {%- comment -%} README (auto for relative path, or use provided URL) {%- endcomment -%}
-      {% assign readme_url = nil %}
-      {% if p.readme %}
-        {% if p.readme == true or p.readme == 'auto' %}
-          {% if p.path %}
-            {% if p.path contains '://' %}
-              {% assign readme_url = p.path | append: '#readme' %}
-            {% else %}
-              {% assign readme_url = site.repo_url_base | append: '/' | append: p.path | append: '#readme' %}
-            {% endif %}
-          {% endif %}
-        {% else %}
-          {% assign readme_url = p.readme %}
-        {% endif %}
-      {% endif %}
-      {% if readme_url %}
-        <a class="btn" href="{{ readme_url }}" target="_blank" rel="noopener noreferrer">README</a>
-      {% endif %}
+      {% raw %}{% comment %} README (auto for relative path, or use provided URL) {% endcomment %}{% endraw %}
+      {% raw %}{% assign readme_url = nil %}{% endraw %}
+      {% raw %}{% if p.readme %}{% endraw %}
+        {% raw %}{% if p.readme == true or p.readme == 'auto' %}{% endraw %}
+          {% raw %}{% if p.path %}{% endraw %}
+            {% raw %}{% if p.path contains '://' %}{% endraw %}
+              {% raw %}{% assign readme_url = p.path | append: '#readme' %}{% endraw %}
+            {% raw %}{% else %}{% endraw %}
+              {% raw %}{% assign readme_url = site.repo_url_base | append: '/' | append: p.path | append: '#readme' %}{% endraw %}
+            {% raw %}{% endif %}{% endraw %}
+          {% raw %}{% endif %}{% endraw %}
+        {% raw %}{% else %}{% endraw %}
+          {% raw %}{% assign readme_url = p.readme %}{% endraw %}
+        {% raw %}{% endif %}{% endraw %}
+      {% raw %}{% endif %}{% endraw %}
+      {% raw %}{% if readme_url %}{% endraw %}
+        <a class="btn" href="{{ readme_url }}" target="_blank" rel="noopener noreferrer">{{ L.card.readme_btn }}</a>
+      {% raw %}{% endif %}{% endraw %}
 
-      {%- comment -%} Report (PDF or URL). Auto only for site-relative p.path -> /<path>/report.pdf {%- endcomment -%}
-      {% assign report_href = nil %}
-      {% if p.report and p.report != '' %}
-        {% if p.report == true or p.report == 'auto' %}
-          {% if p.path and p.path contains '://' %}
-            {# Skip auto for absolute paths #}
-          {% elsif p.path %}
-            {% assign report_href = '/' | append: p.path | append: '/report.pdf' %}
-          {% endif %}
-        {% else %}
-          {% assign report_href = p.report %}
-        {% endif %}
-      {% endif %}
-      {% if report_href %}
-        {% unless report_href contains '://' %}{% assign report_href = report_href | relative_url %}{% endunless %}
-        <a class="btn" href="{{ report_href }}" target="_blank" rel="noopener noreferrer">Report</a>
-      {% endif %}
+      {% raw %}{% comment %} Report (PDF or URL). Auto only for site-relative p.path -> /<path>/report.pdf {% endcomment %}{% endraw %}
+      {% raw %}{% assign report_href = nil %}{% endraw %}
+      {% raw %}{% if p.report and p.report != '' %}{% endraw %}
+        {% raw %}{% if p.report == true or p.report == 'auto' %}{% endraw %}
+          {% raw %}{% if p.path and p.path contains '://' %}{% endraw %}
+            {% raw %}{# Skip auto for absolute paths #}{% endraw %}
+          {% raw %}{% elsif p.path %}{% endraw %}
+            {% raw %}{% assign report_href = '/' | append: p.path | append: '/report.pdf' %}{% endraw %}
+          {% raw %}{% endif %}{% endraw %}
+        {% raw %}{% else %}{% endraw %}
+          {% raw %}{% assign report_href = p.report %}{% endraw %}
+        {% raw %}{% endif %}{% endraw %}
+      {% raw %}{% endif %}{% endraw %}
+      {% raw %}{% if report_href %}{% endraw %}
+        {% raw %}{% unless report_href contains '://' %}{% assign report_href = report_href | relative_url %}{% endraw %}{% endraw %}
+        <a class="btn" href="{{ report_href }}" target="_blank" rel="noopener noreferrer">{{ L.card.report_btn }}</a>
+      {% raw %}{% endif %}{% endraw %}
 
-      {%- comment -%} Spanish Report (PDF or URL) {%- endcomment -%}
-      {% if p.report_es and p.report_es != '' %}
-        {% assign report_es_href = p.report_es %}
-        {% unless report_es_href contains '://' %}{% assign report_es_href = report_es_href | relative_url %}{% endunless %}
-        <a class="btn" href="{{ report_es_href }}" target="_blank" rel="noopener noreferrer">Reporte ES</a>
-      {% endif %}
+      {% raw %}{% if p.report_es and p.report_es != '' %}{% endraw %}
+        {% raw %}{% assign report_es_href = p.report_es %}{% endraw %}
+        {% raw %}{% unless report_es_href contains '://' %}{% assign report_es_href = report_es_href | relative_url %}{% endraw %}{% endraw %}
+        <a class="btn" href="{{ report_es_href }}" target="_blank" rel="noopener noreferrer">{{ L.card.report_es_btn }}</a>
+      {% raw %}{% endif %}{% endraw %}
     </div>
   </div>
 </article>

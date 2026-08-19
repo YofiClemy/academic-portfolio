@@ -1,3 +1,6 @@
+{% raw %}{% assign lang = page.lang | default: "en" %}
+{% assign L = site.data.i18n[lang] | default: site.data.i18n.en %}{% endraw %}
+
 ---
 layout: page
 permalink: /cv/
@@ -9,36 +12,17 @@ permalink: /cv/
 <div class="cv-section">
 
   <div class="cv-language-selector" aria-label="CV language">
-    <button
-      type="button"
-      class="cv-lang active"
-      data-pdf="{{ cv_en }}"
-      data-label="Download English PDF">
-      English
-    </button>
+    <button type="button" class="cv-lang active" data-pdf="{{ cv_en }}" data-label="{{ L.cv.download_en }}">{{ L.cv.en_btn }}</button>
 
-    <button
-      type="button"
-      class="cv-lang"
-      data-pdf="{{ cv_es }}"
-      data-label="Descargar CV en español">
-      Español
-    </button>
+    <button type="button" class="cv-lang" data-pdf="{{ cv_es }}" data-label="{{ L.cv.download_es }}">{{ L.cv.es_btn }}</button>
   </div>
 
   <div class="pdf-embed">
-    <iframe
-      id="cv-frame"
-      src="{{ cv_en }}#view=Fit"
-      title="Curriculum Vitae"
-      loading="lazy">
-    </iframe>
+    <iframe id="cv-frame" src="{{ cv_en }}#view=Fit" title="Curriculum Vitae" loading="lazy"></iframe>
   </div>
 
   <p class="pdf-download">
-    <a id="cv-download" href="{{ cv_en }}" target="_blank">
-      Download English PDF
-    </a>
+    <a id="cv-download" href="{{ cv_en }}" target="_blank">{{ L.cv.download_en }}</a>
   </p>
 
 </div>

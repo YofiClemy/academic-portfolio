@@ -1,64 +1,77 @@
-- title: Power studies feeder
+- title_en: Power studies feeder
+  title_es: Estudio del alimentador MV
   category: power
   path: /power-studies-feeder
-  subtitle: "MV feeder study: LF + SC + cap/rebalance sweep"
-  outcome: Ran baseline LF/SC on the CIGRE MV feeder, enumerated actions (OLTC, shunt caps, targeted rebalancing), snapshotted KPIs, and auto-selected the lightest fix meeting planning limits (Vmin ≥ 0.95 pu, Vmax ≤ 1.05 pu, line/trafo ≤ 100%).
-  Selected case: cap_1.0MVAr+rebalance_90pct (1.0 MVAr at bus 11, 10% load transfer on hot LV feeder). CSV summaries, stress/voltage plots, before/after network snapshots.
+  subtitle_en: "MV feeder study: LF + SC + cap/rebalance sweep"
+  subtitle_es: "Estudio de alimentador MT: Flujo de carga + Cortocircuito + barrido de condensadores/rebalanceo"
+  outcome: Ran baseline LF/SC on the CIGRE MV feeder, enumerated actions (OLTC, shunt caps, targeted rebalancing), snapshotted KPIs, and auto-selected the lightest fix meeting planning limits (Vmin[...] Selected case: cap_1.0MVAr+rebalance_90pct (1.0 MVAr at bus 11, 10% load transfer on hot LV feeder). CSV summaries, stress/voltage plots, before/after network snapshots.
   skills: Python, pandapower, pandas, matplotlib, Power systems analysis, Load-flow, IEC 60909 short-circuit, Heuristic optimization / scenario ranking, Data visualization, Reproducible pipelines
   thumb : /assets/thumbs/power-studies-feeder.png
   readme: true
   report: auto
 
-- title: PlantWeb (CS50 Final)
+- title_en: PlantWeb (CS50 Final)
+  title_es: PlantWeb (Proyecto final CS50)
   category: web
   path: https://yoficlemy.github.io/Final-Project-CS50/
-  subtitle: Full-stack course project
+  subtitle_en: Full-stack course project
+  subtitle_es: Proyecto de curso full-stack
   outcome: Built, documented, and demoed a working web app as my CS50 final project.
   skills: CS50, Python/JS, web app design, documentation, demos
   thumb: /assets/thumbs/plantweb.png
 
-- title: Electronics II (7 Labs)
+- title_en: Electronics II (7 Labs)
+  title_es: Electrónica II (7 prácticas)
   category: electronics
   path: electronics/
-  subtitle: Analog, diodes, BJT, op-amp
+  subtitle_en: Analog, diodes, BJT, op-amp
+  subtitle_es: Analógico, diodos, BJT, amplificador operacional
   outcome: Built & verified rectifier, clipper, BJT single/cascade, and op-amp labs against specs.
   skills: LTspice/Proteus, biasing & small-signal, gain/bandwidth, measurement planning
   thumb: /assets/thumbs/electronics.png
   readme: true
   report: https://github.com/YofiClemy/academic-portfolio/tree/main/electronics
-  
-- title: Electrical Measurements (7 Labs)
+
+- title_en: Electrical Measurements (7 Labs)
+  title_es: Mediciones eléctricas (7 prácticas)
   category: Measurements
   path: measurements/
-  subtitle: Metrology & AC/DC measurement techniques
+  subtitle_en: Metrology & AC/DC measurement techniques
+  subtitle_es: Metrología y técnicas de medición AC/DC
   outcome: "Verified instrument class; measured R, Z, and single/three-phase power using VA, comparison/substitution, Wheatstone, 3A/3V, wattmeter & Aron; quantified uncertainty."
   skills: "Calibration, Type A/B uncertainty, bridge balancing, phasors & PF, wattmeter wiring, data analysis (Python), clear lab reporting"
   thumb: /assets/thumbs/measurements.png
   readme: true
 
-- title: Traffic Lights FSM (Proteus)
+- title_en: Traffic Lights FSM (Proteus)
+  title_es: Semáforos FSM (Proteus)
   category: logic
   path: logics/logic-systems-traffic-lights-in-proteus-optional-hdl-testben
-  subtitle: Moore FSM + timing divider
+  subtitle_en: Moore FSM + timing divider
+  subtitle_es: FSM de Moore + divisor de tiempos
   outcome: Working, debounced state machine with deterministic phase timing.
   skills: FSM design, timing division, simulation, test cases
   thumb: /assets/thumbs/Traffic_Lights.png
   readme: true
   report: auto
 
-- title: Rankine Cycle Studies
+- title_en: Rankine Cycle Studies
+  title_es: Estudios del ciclo Rankine
   category: power
   path: machines/rankine-analysis
-  subtitle: "Superheat vs no superheat; ideal vs real"
+  subtitle_en: "Superheat vs no superheat; ideal vs real"
+  subtitle_es: "Sobrecalentamiento vs sin sobrecalentamiento; ideal vs real"
   outcome: "Compared η_th and specific work across pressure/temperature/superheat cases."
   skills: "Cycle modeling, property tables, η_th gap (ideal vs real), plots"
   thumb : /assets/thumbs/Rankine.png
   readme: true
 
-- title: Otto / Diesel / Dual
+- title_en: Otto / Diesel / Dual
+  title_es: Otto / Diésel / Dual
   category: power
   path: machines/internal-combustion-diesel-otto-dual
-  subtitle: η_th vs compression ratio
+  subtitle_en: η_th vs compression ratio
+  subtitle_es: η_th vs relación de compresión
   outcome: Quantified efficiency impact of r, γ, and heat-addition model (Otto/Diesel/Dual).
   skills: Thermo cycles, parametric sweeps, result interpretation
   thumb : /assets/thumbs/Otto_Diesel_Dual.png
