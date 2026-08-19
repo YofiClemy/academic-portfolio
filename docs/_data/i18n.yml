@@ -363,13 +363,13 @@ en:
 
 es:
 
-    header:
-      profile: "Perfil"
-      projects: "Proyectos"
-      experience: "Experiencia"
-      cv: "CV"
-      contact: "Contacto"
-      theme: "Claro"
+  header:
+    profile: "Perfil"
+    projects: "Proyectos"
+    experience: "Experiencia"
+    cv: "CV"
+    contact: "Contacto"
+    theme: "Claro"
 
   hero:
 
