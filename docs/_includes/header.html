@@ -4,6 +4,7 @@
 
     <a
       class="site-brand"
+      rel="author"
       href="{{ '/' | relative_url }}"
       aria-label="Clément Chevauchey — Home"
     >
@@ -17,10 +18,7 @@
     </a>
 
 
-    <nav
-      class="site-nav"
-      aria-label="Main navigation"
-    >
+    <nav class="site-nav" aria-label="Main navigation">
 
       <input
         type="checkbox"
@@ -28,50 +26,33 @@
         class="nav-trigger"
       >
 
-
       <label
         for="nav-trigger"
         class="nav-trigger-label"
-        aria-label="Toggle navigation"
+        aria-label="Open navigation menu"
       >
 
         <span class="menu-icon">
 
           <svg
             viewBox="0 0 18 15"
-            width="18"
-            height="15"
+            width="20"
+            height="17"
             aria-hidden="true"
           >
-
             <path
-              d="
-                M18,1.484
-                c0,0.82-0.665,1.484-1.484,1.484
-                H1.484
-                C0.665,2.969,0,2.304,0,1.484
-                C0,0.665,0.665,0,1.484,0
-                h15.032
-                C17.335,0,18,0.665,18,1.484z
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484
+              C0.665,2.969,0,2.304,0,1.484C0,0.665,0.665,0,1.484,0
+              h15.032C17.335,0,18,0.665,18,1.484z
 
-                M18,7.516
-                c0,0.82-0.665,1.484-1.484,1.484
-                H1.484
-                C0.665,9,0,8.336,0,7.516
-                c0-0.82,0.665-1.484,1.484-1.484
-                h15.032
-                C17.335,6.032,18,6.696,18,7.516z
+              M18,7.516c0,0.82-0.665,1.484-1.484,1.484H1.484
+              C0.665,9,0,8.336,0,7.516c0-0.82,0.665-1.484,1.484-1.484
+              h15.032C17.335,6.032,18,6.696,18,7.516z
 
-                M18,13.516
-                c0,0.82-0.665,1.484-1.484,1.484
-                H1.484
-                C0.665,15,0,14.336,0,13.516
-                c0-0.82,0.665-1.484,1.484-1.484
-                h15.032
-                C17.335,12.032,18,12.696,18,13.516z
-              "
+              M18,13.516c0,0.82-0.665,1.484-1.484,1.484H1.484
+              C0.665,15,0,14.336,0,13.516c0-0.82,0.665-1.484,1.484-1.484
+              h15.032C17.335,12.032,18,12.696,18,13.516z"
             ></path>
-
           </svg>
 
         </span>
@@ -81,47 +62,29 @@
 
       <div class="trigger">
 
-        <a
-          class="page-link"
-          href="{{ '/' | relative_url }}#about"
-        >
-          Profile
-        </a>
+        {% for my_page in site.header_pages %}
 
-        <a
-          class="page-link"
-          href="{{ '/' | relative_url }}#projects"
-        >
-          Projects
-        </a>
+          {% assign my_page_obj = site.pages | where: "path", my_page | first %}
 
-        <a
-          class="page-link"
-          href="{{ '/' | relative_url }}#experience"
-        >
-          Experience
-        </a>
+          {% if my_page_obj %}
 
-        <a
-          class="page-link"
-          href="{{ '/cv/' | relative_url }}"
-        >
-          CV
-        </a>
+            <a
+              class="page-link"
+              href="{{ my_page_obj.url | relative_url }}"
+            >
+              {{ my_page_obj.title | escape }}
+            </a>
 
-        <a
-          class="page-link"
-          href="{{ '/' | relative_url }}#contact"
-        >
-          Contact
-        </a>
+          {% endif %}
+
+        {% endfor %}
 
 
         <button
           id="theme-toggle"
           class="theme-toggle"
           type="button"
-          aria-label="Toggle theme"
+          aria-label="Toggle light and dark theme"
         >
           ☀︎ Light
         </button>
