@@ -253,16 +253,26 @@ a {
 
 
 .site-brand__name {
-  color: var(--header-fg);
+  display: block;
 
-  font-size: 0.79rem;
-  font-weight: 700;
+  max-width: 155px;
 
-  letter-spacing: -0.01em;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  font-size: .76rem;
 }
 
+@media (max-width: 390px) {
 
-/* Fallback if an older page still uses Minima's site-title */
+  .site-brand__name {
+    display: none;
+  }
+
+}
+
 
 .site-title,
 .site-title:visited,
@@ -1667,4 +1677,78 @@ html[data-theme="light"]
     align-items: flex-start;
   }
 
+   /* =========================================================
+   FORCE DESKTOP NAVIGATION
+========================================================= */
+
+@media (min-width: 721px) {
+
+  .site-nav {
+    position: static !important;
+  }
+
+  .site-nav .nav-trigger,
+  .site-nav .nav-trigger-label,
+  .site-nav .menu-icon {
+    display: none !important;
+  }
+
+  .site-nav .trigger {
+    position: static !important;
+
+    display: flex !important;
+
+    width: auto !important;
+    min-width: 0 !important;
+
+    padding: 0 !important;
+
+    flex-direction: row !important;
+    align-items: center !important;
+
+    gap: 3px;
+
+    border: 0 !important;
+    border-radius: 0 !important;
+
+    background: transparent !important;
+
+    box-shadow: none !important;
+  }
+
+  .site-nav .page-link {
+    display: inline-flex !important;
+
+    width: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+
+    padding:
+      8px
+      10px !important;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: .77rem;
+  }
+
+  .theme-toggle {
+    display: inline-flex !important;
+
+    width: auto !important;
+    min-height: 32px !important;
+
+    margin-left: 5px !important;
+
+    padding:
+      6px
+      10px !important;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+}
 }
