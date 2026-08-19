@@ -1,6 +1,7 @@
 ---
 layout: landing
 title: ""
+lang: en
 ---
 <div class="portfolio-page">
 
