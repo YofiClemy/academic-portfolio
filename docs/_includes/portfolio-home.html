@@ -426,13 +426,8 @@
   >
 
     {% for p in site.data.projects %}
-      {% if lang == "es" %}
-        {% assign title = p.title_es | default: p.title_en %}
-        {% assign subtitle = p.subtitle_es | default: p.subtitle_en %}
-      {% else %}
-        {% assign title = p.title_en | default: p.title %}
-        {% assign subtitle = p.subtitle_en | default: p.subtitle %}
-      {% endif %}
+      {% assign title = p['title_' | append: lang] | default: p.title_en %}
+      {% assign subtitle = p['subtitle_' | append: lang] | default: p.subtitle_en %}
       {% include card.html p=p lang=lang title=title subtitle=subtitle %}
     {% endfor %}
 
