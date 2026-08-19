@@ -131,13 +131,41 @@ href="{{ home }}#contact"
 
 
 
-<button
-id="theme-toggle"
-class="theme-toggle"
-type="button"
-aria-label="Toggle light and dark theme"
+<!-- Language switch -->
+
+{% if page.lang == "es" %}
+
+<a
+  class="language-toggle"
+  href="{{ '/' | relative_url }}"
+  aria-label="Switch to English"
 >
-☀︎ {{ t.header.theme }}
+  EN
+</a>
+
+{% else %}
+
+<a
+  class="language-toggle"
+  href="{{ '/es/' | relative_url }}"
+  aria-label="Cambiar a español"
+>
+  ES
+</a>
+
+{% endif %}
+
+
+
+<!-- Theme toggle -->
+
+<button
+  id="theme-toggle"
+  class="theme-toggle"
+  type="button"
+  aria-label="Toggle light and dark theme"
+>
+  ☀︎ {{ t.header.theme }}
 </button>
 
 
