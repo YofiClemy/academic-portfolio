@@ -81,13 +81,13 @@
         {% raw %}{% endif %}{% endraw %}
       {% raw %}{% endif %}{% endraw %}
       {% raw %}{% if report_href %}{% endraw %}
-        {% raw %}{% unless report_href contains '://' %}{% assign report_href = report_href | relative_url %}{% endraw %}{% endraw %}
+        {% raw %}{% unless report_href contains '://' %}{% assign report_href = report_href | relative_url %}{% endunless %}{% endraw %}
         <a class="btn" href="{{ report_href }}" target="_blank" rel="noopener noreferrer">{{ L.card.report_btn }}</a>
       {% raw %}{% endif %}{% endraw %}
 
       {% raw %}{% if p.report_es and p.report_es != '' %}{% endraw %}
         {% raw %}{% assign report_es_href = p.report_es %}{% endraw %}
-        {% raw %}{% unless report_es_href contains '://' %}{% assign report_es_href = report_es_href | relative_url %}{% endraw %}{% endraw %}
+        {% raw %}{% unless report_es_href contains '://' %}{% assign report_es_href = report_es_href | relative_url %}{% endunless %}{% endraw %}
         <a class="btn" href="{{ report_es_href }}" target="_blank" rel="noopener noreferrer">{{ L.card.report_es_btn }}</a>
       {% raw %}{% endif %}{% endraw %}
     </div>
