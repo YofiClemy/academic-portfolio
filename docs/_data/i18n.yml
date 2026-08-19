@@ -27,6 +27,13 @@ en:
       Open to 2026–27 internships and entry-level
       opportunities in Argentina and remotely.
 
+  header:
+    profile: "Profile"
+    projects: "Projects"
+    experience: "Experience"
+    cv: "CV"
+    contact: "Contact"
+    theme: "Light"
 
   technical:
 
@@ -380,7 +387,14 @@ es:
       mediante simulación, programación y proyectos
       prácticos de ingeniería.
 
-
+    header:
+      profile: "Perfil"
+      projects: "Proyectos"
+      experience: "Experiencia"
+      cv: "CV"
+      contact: "Contacto"
+      theme: "Claro"
+  
     buttons:
 
       projects: "Ver proyectos"
