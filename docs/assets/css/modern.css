@@ -135,28 +135,31 @@ a {
 }
 
 
-/* Floating navigation container */
+/*
+   Full-width floating navigation bar.
+
+   The header itself provides the 20px margin from the
+   browser edges, so this wrapper can use the full available
+   width rather than stopping at 1180px.
+*/
 
 .site-header .wrapper {
   width: 100%;
-  max-width: 1180px !important;
+  max-width: none !important;
 
   min-height: 58px;
 
-  margin:
-    0
-    auto;
+  margin: 0;
 
   padding:
     8px
-    10px
-    8px
-    14px;
+    16px;
 
   display: flex;
-
   align-items: center;
-  justify-content: space-between;
+
+  /* Brand left, nav pushed to far right */
+  justify-content: flex-start;
 
   gap: 20px;
 
@@ -213,7 +216,8 @@ a {
   gap: 10px;
 
   min-width: 0;
-  flex-shrink: 0;
+
+  flex: 0 0 auto;
 
   color: var(--header-fg) !important;
 
@@ -275,13 +279,21 @@ a {
 
   float: none;
 
-  margin: 0;
+  margin:
+    0
+    0
+    0
+    auto !important;
+
   padding: 0;
+
+  flex: 0 0 auto;
 
   border: 0;
 
   background: transparent;
 }
+
 
 .site-nav .trigger {
   position: static !important;
@@ -294,6 +306,7 @@ a {
 
   flex-direction: row !important;
   align-items: center !important;
+  justify-content: flex-end !important;
 
   gap: 3px;
 
@@ -303,6 +316,7 @@ a {
 
   box-shadow: none !important;
 }
+
 
 .site-nav .page-link {
   display: inline-flex !important;
@@ -336,9 +350,11 @@ a {
     transform .15s ease;
 }
 
+
 .site-nav .page-link:not(:last-child) {
   margin-right: 0;
 }
+
 
 .site-nav .page-link:hover {
   color: var(--brand) !important;
@@ -348,6 +364,7 @@ a {
 
   text-decoration: none !important;
 }
+
 
 html[data-theme="light"] .site-nav .page-link:hover {
   background:
@@ -398,6 +415,7 @@ html[data-theme="light"] .site-nav .page-link:hover {
     transform .15s ease;
 }
 
+
 .theme-toggle:hover {
   border-color: var(--brand);
 
@@ -409,6 +427,7 @@ html[data-theme="light"] .site-nav .page-link:hover {
   transform:
     translateY(-1px);
 }
+
 
 html[data-theme="light"] .theme-toggle:hover {
   background:
@@ -439,9 +458,11 @@ html[data-theme="light"] .theme-toggle:hover {
   border: 0;
 }
 
+
 .nav-trigger-label {
   display: none !important;
 }
+
 
 .menu-icon {
   display: none;
@@ -454,9 +475,7 @@ html[data-theme="light"] .theme-toggle:hover {
 
 @media (max-width: 720px) {
 
-  /* -------------------------------------------------------
-     Header shell
-  ------------------------------------------------------- */
+  /* Header shell */
 
   .site-header {
     padding:
@@ -480,6 +499,11 @@ html[data-theme="light"] .theme-toggle:hover {
       6px
       13px;
 
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
     gap: 12px;
 
     border-radius: 15px;
@@ -490,14 +514,14 @@ html[data-theme="light"] .theme-toggle:hover {
   }
 
 
-  /* -------------------------------------------------------
-     Brand
-  ------------------------------------------------------- */
+  /* Brand */
 
   .site-brand {
     min-width: 0;
 
     gap: 8px;
+
+    flex: 0 1 auto;
   }
 
 
@@ -518,20 +542,18 @@ html[data-theme="light"] .theme-toggle:hover {
   }
 
 
-  /* -------------------------------------------------------
-     Navigation shell
-  ------------------------------------------------------- */
+  /* Navigation pushed to far-right */
 
   .site-nav {
     position: static !important;
+
+    margin-left: auto !important;
 
     flex: 0 0 auto;
   }
 
 
-  /* -------------------------------------------------------
-     Hamburger button
-  ------------------------------------------------------- */
+  /* Hamburger */
 
   .nav-trigger-label {
     display: grid !important;
@@ -539,7 +561,11 @@ html[data-theme="light"] .theme-toggle:hover {
     width: 42px;
     height: 42px;
 
-    margin: 0;
+    margin:
+      0
+      0
+      0
+      auto !important;
 
     place-items: center;
 
@@ -612,9 +638,7 @@ html[data-theme="light"] .theme-toggle:hover {
   }
 
 
-  /* -------------------------------------------------------
-     Dropdown
-  ------------------------------------------------------- */
+  /* Dropdown */
 
   .site-nav .trigger {
     position: fixed !important;
@@ -710,9 +734,7 @@ html[data-theme="light"] .theme-toggle:hover {
   }
 
 
-  /* -------------------------------------------------------
-     Mobile links
-  ------------------------------------------------------- */
+  /* Mobile links */
 
   .site-nav .page-link {
     display: flex !important;
@@ -756,9 +778,7 @@ html[data-theme="light"] .theme-toggle:hover {
   }
 
 
-  /* -------------------------------------------------------
-     Mobile theme toggle
-  ------------------------------------------------------- */
+  /* Mobile theme toggle */
 
   .theme-toggle {
     display: flex !important;
@@ -825,6 +845,9 @@ html[data-theme="light"] .theme-toggle:hover {
 
   .site-nav {
     position: static !important;
+
+    margin-left:
+      auto !important;
   }
 
 
@@ -840,15 +863,18 @@ html[data-theme="light"] .theme-toggle:hover {
 
     flex-direction: row !important;
     align-items: center !important;
+    justify-content: flex-end !important;
 
     gap: 3px;
 
     border: 0 !important;
     border-radius: 0 !important;
 
-    background: transparent !important;
+    background:
+      transparent !important;
 
-    box-shadow: none !important;
+    box-shadow:
+      none !important;
   }
 
 
@@ -864,7 +890,8 @@ html[data-theme="light"] .theme-toggle:hover {
       8px
       10px !important;
 
-    justify-content: center !important;
+    justify-content:
+      center !important;
   }
 
 
@@ -874,13 +901,15 @@ html[data-theme="light"] .theme-toggle:hover {
     width: auto !important;
     min-height: 32px !important;
 
-    margin-left: 5px !important;
+    margin-left:
+      5px !important;
 
     padding:
       6px
       10px !important;
 
-    justify-content: center !important;
+    justify-content:
+      center !important;
   }
 
 }
