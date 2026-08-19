@@ -152,200 +152,6 @@ en:
 
     empty: "No projects match your search."
 
-
-
-
-
-es:
-
-  hero:
-
-    eyebrow: "Sistemas Eléctricos · Automatización · Computación aplicada"
-
-    title:
-
-      first: "Clément"
-
-      last: "Chevauchey"
-
-
-    heading:
-
-      before: "Estudiante de Ingeniería Eléctrica enfocado en"
-
-      highlight: "Sistemas Eléctricos y Automatización Industrial."
-
-
-    intro: >
-      Explorando el análisis de sistemas eléctricos,
-      protecciones, automatización y mediciones eléctricas
-      mediante simulación, programación y proyectos
-      prácticos de ingeniería.
-
-
-    buttons:
-
-      projects: "Ver proyectos"
-
-      cv: "Ver CV"
-
-      github: "GitHub ↗"
-
-
-    availability: >
-      Disponible para pasantías 2026–27 y oportunidades
-      profesionales iniciales en Argentina y modalidad remota.
-
-
-
-  technical:
-
-    label: "Resumen técnico"
-
-    headline: "Energía + Automatización"
-
-
-    power:
-
-      title: "Sistemas eléctricos"
-
-      value: "DIgSILENT PowerFactory · Flujo de carga · Cortocircuitos"
-
-
-    automation:
-
-      title: "Automatización"
-
-      value: "PLC / SCADA · Fundamentos de TIA Portal"
-
-
-    simulation:
-
-      title: "Simulación"
-
-      value: "LTspice · Proteus · MATLAB / Scilab"
-
-
-    computing:
-
-      title: "Computación aplicada"
-
-      value: "Python · NumPy · Pandas · Matplotlib"
-
-
-
-
-  about:
-
-    kicker: "Perfil"
-
-    title: "Teoría de ingeniería aplicada a problemas reales."
-
-
-    intro: >
-      Mi portfolio reúne trabajos universitarios,
-      proyectos independientes y experimentación técnica
-      dentro del campo de la ingeniería eléctrica.
-
-
-    paragraphs:
-
-
-      - >
-        Soy estudiante de Ingeniería Eléctrica desarrollando
-        mi perfil alrededor de redes eléctricas,
-        análisis de sistemas de potencia y automatización industrial.
-
-
-      - >
-        Mis principales intereses incluyen estudios de flujo
-        de carga y cortocircuito, fundamentos de protección,
-        sistemas PLC/SCADA y el uso de herramientas de
-        ingeniería para analizar sistemas eléctricos reales.
-
-
-      - >
-        Mis proyectos combinan teoría de circuitos,
-        simulación, mediciones y programación utilizando
-        herramientas como DIgSILENT PowerFactory, Python,
-        LTspice, Proteus y MATLAB/Scilab.
-
-
-
-
-  focus:
-
-    title: "Enfoque técnico actual"
-
-
-    power:
-
-      title: "Sistemas Eléctricos"
-
-      text: "Flujo de carga · fallas · redes eléctricas"
-
-
-    protection:
-
-      title: "Protecciones"
-
-      text: "Análisis de fallas · fundamentos de protección"
-
-
-    automation:
-
-      title: "Automatización Industrial"
-
-      text: "PLC · SCADA · control industrial"
-
-
-    computing:
-
-      title: "Computación aplicada"
-
-      text: "Python · simulación · análisis de datos"
-
-
-
-
-  projects:
-
-    kicker: "Trabajos seleccionados"
-
-    title: "Proyectos de ingeniería."
-
-
-    description: >
-      Proyectos académicos y personales relacionados con
-      sistemas eléctricos, electrónica, mediciones,
-      simulación y automatización.
-
-
-    count: "proyectos"
-
-
-    search:
-
-      placeholder: "Buscar por proyecto, habilidad o tecnología…"
-
-      label: "Buscar proyectos"
-
-
-    categories:
-
-      all: "Todos"
-
-      power: "Sistemas eléctricos"
-
-      electronics: "Electrónica"
-
-      measurements: "Mediciones"
-
-      logic: "Automatización / Lógica"
-
-
-    empty: "No hay proyectos que coincidan con la búsqueda."
-
   experience:
 
     kicker: "Background"
@@ -548,13 +354,195 @@ es:
 
 
 
-
-# ======================================================
-# SPANISH
-# ======================================================
-
-
 es:
+
+  hero:
+
+    eyebrow: "Sistemas Eléctricos · Automatización · Computación aplicada"
+
+    title:
+
+      first: "Clément"
+
+      last: "Chevauchey"
+
+
+    heading:
+
+      before: "Estudiante de Ingeniería Eléctrica enfocado en"
+
+      highlight: "Sistemas Eléctricos y Automatización Industrial."
+
+
+    intro: >
+      Explorando el análisis de sistemas eléctricos,
+      protecciones, automatización y mediciones eléctricas
+      mediante simulación, programación y proyectos
+      prácticos de ingeniería.
+
+
+    buttons:
+
+      projects: "Ver proyectos"
+
+      cv: "Ver CV"
+
+      github: "GitHub ↗"
+
+
+    availability: >
+      Disponible para pasantías 2026–27 y oportunidades
+      profesionales iniciales en Argentina y modalidad remota.
+
+
+
+  technical:
+
+    label: "Resumen técnico"
+
+    headline: "Energía + Automatización"
+
+
+    power:
+
+      title: "Sistemas eléctricos"
+
+      value: "DIgSILENT PowerFactory · Flujo de carga · Cortocircuitos"
+
+
+    automation:
+
+      title: "Automatización"
+
+      value: "PLC / SCADA · Fundamentos de TIA Portal"
+
+
+    simulation:
+
+      title: "Simulación"
+
+      value: "LTspice · Proteus · MATLAB / Scilab"
+
+
+    computing:
+
+      title: "Computación aplicada"
+
+      value: "Python · NumPy · Pandas · Matplotlib"
+
+
+
+
+  about:
+
+    kicker: "Perfil"
+
+    title: "Teoría de ingeniería aplicada a problemas reales."
+
+
+    intro: >
+      Mi portfolio reúne trabajos universitarios,
+      proyectos independientes y experimentación técnica
+      dentro del campo de la ingeniería eléctrica.
+
+
+    paragraphs:
+
+
+      - >
+        Soy estudiante de Ingeniería Eléctrica desarrollando
+        mi perfil alrededor de redes eléctricas,
+        análisis de sistemas de potencia y automatización industrial.
+
+
+      - >
+        Mis principales intereses incluyen estudios de flujo
+        de carga y cortocircuito, fundamentos de protección,
+        sistemas PLC/SCADA y el uso de herramientas de
+        ingeniería para analizar sistemas eléctricos reales.
+
+
+      - >
+        Mis proyectos combinan teoría de circuitos,
+        simulación, mediciones y programación utilizando
+        herramientas como DIgSILENT PowerFactory, Python,
+        LTspice, Proteus y MATLAB/Scilab.
+
+
+
+
+  focus:
+
+    title: "Enfoque técnico actual"
+
+
+    power:
+
+      title: "Sistemas Eléctricos"
+
+      text: "Flujo de carga · fallas · redes eléctricas"
+
+
+    protection:
+
+      title: "Protecciones"
+
+      text: "Análisis de fallas · fundamentos de protección"
+
+
+    automation:
+
+      title: "Automatización Industrial"
+
+      text: "PLC · SCADA · control industrial"
+
+
+    computing:
+
+      title: "Computación aplicada"
+
+      text: "Python · simulación · análisis de datos"
+
+
+
+
+  projects:
+
+    kicker: "Trabajos seleccionados"
+
+    title: "Proyectos de ingeniería."
+
+
+    description: >
+      Proyectos académicos y personales relacionados con
+      sistemas eléctricos, electrónica, mediciones,
+      simulación y automatización.
+
+
+    count: "proyectos"
+
+
+    search:
+
+      placeholder: "Buscar por proyecto, habilidad o tecnología…"
+
+      label: "Buscar proyectos"
+
+
+    categories:
+
+      all: "Todos"
+
+      power: "Sistemas eléctricos"
+
+      electronics: "Electrónica"
+
+      measurements: "Mediciones"
+
+      logic: "Automatización / Lógica"
+
+
+    empty: "No hay proyectos que coincidan con la búsqueda."
 
 
   experience:
