@@ -4,25 +4,20 @@ title: Projects
 permalink: /projects/
 ---
 
-{% raw %}{% assign lang = page.lang | default: "en" %}
-{% assign L = site.data.i18n[lang] | default: site.data.i18n.en %}{% endraw %}
-
+<!-- Projects page reuses the same grid -->
 <section class="controls">
-  <input id="q" type="search" placeholder="{{ L.projects.search_placeholder }}" aria-label="Search projects… (title, subtitle, tag)">
+  <input id="q" type="search" placeholder="Search projects… (title, subtitle, tag)" aria-label="Search projects">
   <div id="chips" class="chips">
-    <button class="chip active" data-cat="all">{{ L.projects.category_all }}</button>
-    <button class="chip" data-cat="measurements">{{ L.projects.category_measurements }}</button>
-    <button class="chip" data-cat="electronics">{{ L.projects.category_electronics }}</button>
-    <button class="chip" data-cat="logic">{{ L.projects.category_logic }}</button>
-    <button class="chip" data-cat="power">{{ L.projects.category_power }}</button>
+    <button class="chip active" data-cat="all">All</button>
+    <button class="chip" data-cat="measurements">Measurements</button>
+    <button class="chip" data-cat="electronics">Electronics</button>
+    <button class="chip" data-cat="logic">Logic</button>
+    <button class="chip" data-cat="power">Power/Thermo</button>
   </div>
 </section>
 
 <section class="grid" id="grid">
-{% raw %}{% assign lang = page.lang | default: 'en' %}{% endraw %}
 {% for p in site.data.projects %}
-  {% raw %}{% assign title = p['title_' | append: lang] | default: p.title_en %}
-  {% assign subtitle = p['subtitle_' | append: lang] | default: p.subtitle_en %}
-  {% include card.html p=p lang=lang title=title subtitle=subtitle %}{% endraw %}
+  {% include card.html p=p %}
 {% endfor %}
 </section>
