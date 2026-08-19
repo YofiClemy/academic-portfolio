@@ -1,4 +1,5 @@
 {% assign lang = page.lang | default: "en" %}
+{% assign t = site.data.i18n[lang] %}
 
 <div class="portfolio-page">
 
@@ -7,51 +8,83 @@
      HERO
 ======================================================= -->
 
+
 <section class="portfolio-hero">
 
   <div class="portfolio-hero__inner">
 
+
     <div>
 
+
       <div class="hero__eyebrow">
-        Power Systems · Automation · Engineering Computing
+
+        {{ t.hero.eyebrow }}
+
       </div>
 
+
+
       <h1>
-        Clément<br>
-        Chevauchey
+
+        {{ t.hero.title.first }}<br>
+
+        {{ t.hero.title.last }}
+
       </h1>
 
+
+
       <h2>
-        Electrical Engineering student focused on
+
+        {{ t.hero.heading.before }}
+
         <span>
-          Power Systems & Industrial Automation.
+
+          {{ t.hero.heading.highlight }}
+
         </span>
+
       </h2>
 
+
+
       <p class="hero__intro">
-        Exploring power-system analysis, protection,
-        automation and electrical measurements through
-        simulation, programming and hands-on engineering
-        projects.
+
+        {{ t.hero.intro }}
+
       </p>
 
+
+
       <div class="hero__actions">
+
 
         <a
           href="#projects"
           class="btn btn--primary"
         >
-          Explore projects
-          <span aria-hidden="true">↓</span>
+
+          {{ t.hero.buttons.projects }}
+
+          <span aria-hidden="true">
+            ↓
+          </span>
+
         </a>
+
+
 
         <a
           href="#cv"
           class="btn btn--secondary"
         >
-          View CV
+
+          {{ t.hero.buttons.cv }}
+
         </a>
+
+
 
         <a
           href="https://github.com/YofiClemy"
@@ -59,329 +92,569 @@
           rel="noopener"
           class="btn btn--ghost"
         >
-          GitHub ↗
+
+          {{ t.hero.buttons.github }}
+
         </a>
 
+
       </div>
+
+
+
 
       <div class="hero__availability">
 
+
         <span class="status-dot"></span>
 
-        Open to 2026–27 internships and entry-level
-        opportunities in Argentina and remotely.
+
+        {{ t.hero.availability }}
+
 
       </div>
+
 
     </div>
 
 
+
+
+
     <aside class="hero-panel">
+
 
       <div class="hero-panel__header">
 
+
         <div>
 
+
           <div class="hero-panel__label">
-            Technical snapshot
+
+            {{ t.technical.label }}
+
           </div>
 
+
+
           <strong class="hero-panel__headline">
-            Power + Automation
+
+            {{ t.technical.headline }}
+
           </strong>
 
+
         </div>
+
+
+
 
         <div class="hero-panel__mark">
+
           EE
+
         </div>
 
+
       </div>
+
+
+
+
 
 
       <div class="hero-panel__item">
 
+
         <span>
-          Power systems
+
+          {{ t.technical.power.title }}
+
         </span>
 
+
+
         <strong>
-          DIgSILENT PowerFactory ·
-          Load Flow ·
-          Short Circuit
+
+          {{ t.technical.power.value }}
+
         </strong>
 
+
       </div>
+
+
+
+
+
 
 
       <div class="hero-panel__item">
 
+
         <span>
-          Automation
+
+          {{ t.technical.automation.title }}
+
         </span>
 
+
+
         <strong>
-          PLC / SCADA ·
-          TIA Portal fundamentals
+
+          {{ t.technical.automation.value }}
+
         </strong>
 
+
       </div>
+
+
+
+
+
 
 
       <div class="hero-panel__item">
 
+
         <span>
-          Simulation
+
+          {{ t.technical.simulation.title }}
+
         </span>
 
+
+
         <strong>
-          LTspice ·
-          Proteus ·
-          MATLAB / Scilab
+
+          {{ t.technical.simulation.value }}
+
         </strong>
 
+
       </div>
+
+
+
+
+
 
 
       <div class="hero-panel__item">
 
+
         <span>
-          Engineering computing
+
+          {{ t.technical.computing.title }}
+
         </span>
 
+
+
         <strong>
-          Python ·
-          NumPy ·
-          Pandas ·
-          Matplotlib
+
+          {{ t.technical.computing.value }}
+
         </strong>
 
+
       </div>
+
+
+
+
 
 
       <div class="hero-panel__footer">
+
 
         <span>
           FR · Native
         </span>
 
+
         <span>
           EN · C1
         </span>
+
 
         <span>
           ES · C1
         </span>
 
+
       </div>
+
+
 
     </aside>
 
+
+
   </div>
 
+
 </section>
+
+
+
+
 
 
 <!-- ======================================================
      ABOUT
 ======================================================= -->
 
+
 <section
   class="portfolio-section"
   id="about"
 >
 
+
   <div class="section-heading">
 
+
     <span class="section-kicker">
-      Profile
+
+      {{ t.about.kicker }}
+
     </span>
 
+
+
+
     <h2>
-      Engineering theory applied to practical problems.
+
+      {{ t.about.title }}
+
     </h2>
 
+
+
+
     <p>
-      My portfolio brings together university work,
-      independent projects and technical experimentation
-      across electrical engineering.
+
+      {{ t.about.intro }}
+
     </p>
 
+
+
   </div>
+
+
+
 
 
   <div class="about-layout">
 
+
+
     <article class="about-card">
 
-      <p>
-        I am an Electrical Engineering student developing
-        my profile around electrical networks, power-system
-        analysis and industrial automation.
-      </p>
+
+
+      {% for paragraph in t.about.paragraphs %}
 
       <p>
-        I am particularly interested in load-flow and
-        short-circuit studies, protection fundamentals,
-        PLC/SCADA systems and the use of engineering
-        software to analyse real electrical systems.
+
+        {{ paragraph }}
+
       </p>
 
-      <p>
-        My projects combine circuit theory, simulation,
-        measurements and programming using tools including
-        DIgSILENT PowerFactory, Python, LTspice, Proteus
-        and MATLAB/Scilab.
-      </p>
+      {% endfor %}
+
+
+
+    </article>
 
     </article>
 
 
+
+
+
     <aside class="focus-card">
 
+
       <div class="focus-card__title">
-        Current technical focus
+
+        {{ t.focus.title }}
+
       </div>
+
+
+
+
 
       <div class="focus-list">
 
+
+
         <div class="focus-item">
 
+
           <div class="focus-icon">
+
             PS
+
           </div>
+
+
 
           <div>
 
+
             <strong>
-              Power Systems
+
+              {{ t.focus.power.title }}
+
             </strong>
 
+
+
             <span>
-              Load flow · fault studies · networks
+
+              {{ t.focus.power.text }}
+
             </span>
 
+
           </div>
+
 
         </div>
 
 
+
+
+
+
+
         <div class="focus-item">
 
+
           <div class="focus-icon">
+
             PR
+
           </div>
+
+
 
           <div>
 
+
             <strong>
-              Protection
+
+              {{ t.focus.protection.title }}
+
             </strong>
 
+
+
             <span>
-              Fault analysis · protection fundamentals
+
+              {{ t.focus.protection.text }}
+
             </span>
 
+
           </div>
+
 
         </div>
 
 
+
+
+
+
+
         <div class="focus-item">
 
+
           <div class="focus-icon">
+
             PLC
+
           </div>
+
+
 
           <div>
 
+
             <strong>
-              Industrial Automation
+
+              {{ t.focus.automation.title }}
+
             </strong>
 
+
+
             <span>
-              PLC · SCADA · industrial control
+
+              {{ t.focus.automation.text }}
+
             </span>
+
 
           </div>
 
+
         </div>
+
+
+
+
+
 
 
         <div class="focus-item">
 
+
           <div class="focus-icon">
+
             PY
+
           </div>
+
+
 
           <div>
 
+
             <strong>
-              Engineering Computing
+
+              {{ t.focus.computing.title }}
+
             </strong>
 
+
+
             <span>
-              Python · simulation · data analysis
+
+              {{ t.focus.computing.text }}
+
             </span>
+
 
           </div>
 
+
         </div>
+
+
 
       </div>
 
+
+
     </aside>
+
+
 
   </div>
 
+
+
 </section>
+
+
+
+
+
+
 
 
 <!-- ======================================================
      PROJECTS
 ======================================================= -->
 
+
 <section
   class="portfolio-section projects-section"
   id="projects"
 >
 
+
+
   <div class="section-heading section-heading--split">
+
 
     <div>
 
+
       <span class="section-kicker">
-        Selected work
+
+        {{ t.projects.kicker }}
+
       </span>
 
+
+
+
+
       <h2>
-        Engineering projects.
+
+        {{ t.projects.title }}
+
       </h2>
 
+
+
+
+
       <p>
-        Academic and personal projects covering power systems,
-        electronics, measurements, simulation and automation.
+
+        {{ t.projects.description }}
+
       </p>
+
 
     </div>
 
 
+
+
+
     <span class="project-count">
-      {{ site.data.projects | size }} projects
+
+
+      {{ site.data.projects | size }}
+
+      {{ t.projects.count }}
+
+
     </span>
+
+
 
   </div>
 
 
+
+
+
+
   <div class="project-controls">
+
+
 
     <input
       id="q"
       type="search"
-      placeholder="Search by project, skill or technology…"
+      placeholder="{{ t.projects.search.placeholder }}"
       autocomplete="off"
-      aria-label="Search projects"
+      aria-label="{{ t.projects.search.label }}"
     >
+
+
+
 
 
     <div
@@ -389,49 +662,86 @@
       class="chips"
     >
 
+
+
       <button
         class="chip active"
         type="button"
         data-cat="all"
       >
-        All
+
+        {{ t.projects.categories.all }}
+
       </button>
+
+
+
+
 
       <button
         class="chip"
         type="button"
         data-cat="power"
       >
-        Power Systems
+
+        {{ t.projects.categories.power }}
+
       </button>
+
+
+
+
 
       <button
         class="chip"
         type="button"
         data-cat="electronics"
       >
-        Electronics
+
+        {{ t.projects.categories.electronics }}
+
       </button>
+
+
+
+
 
       <button
         class="chip"
         type="button"
         data-cat="measurements"
       >
-        Measurements
+
+        {{ t.projects.categories.measurements }}
+
       </button>
+
+
+
+
 
       <button
         class="chip"
         type="button"
         data-cat="logic"
       >
-        Automation / Logic
+
+        {{ t.projects.categories.logic }}
+
       </button>
+
+
 
     </div>
 
+
+
   </div>
+
+
+
+
+
 
 
   <div
@@ -439,411 +749,827 @@
     id="grid"
   >
 
+
+
     {% for p in site.data.projects %}
+
       {% include card.html p=p %}
+
     {% endfor %}
+
+
+
+
+
 
     <div
       class="no-results"
       id="no-results"
     >
-      No projects match your search.
+
+      {{ t.projects.empty }}
+
     </div>
+
+
 
   </div>
 
-</section>
 
+
+
+
+</section>
 
 <!-- ======================================================
      EXPERIENCE
 ======================================================= -->
+
 
 <section
   class="portfolio-section"
   id="experience"
 >
 
+
   <div class="section-heading">
 
+
     <span class="section-kicker">
-      Background
+
+      {{ t.experience.kicker }}
+
     </span>
 
+
+
     <h2>
-      Education & experience.
+
+      {{ t.experience.title }}
+
     </h2>
+
+
 
   </div>
 
 
+
+
+
+
   <div class="timeline">
+
+
+
+
 
     <article class="timeline-item">
 
+
       <div class="timeline-item__date">
+
         Present
+
       </div>
+
+
+
+
 
       <div class="timeline-item__content">
 
+
         <h3>
-          Electrical Engineering
+
+          {{ t.experience.education.title }}
+
         </h3>
 
+
+
+
+
         <p class="timeline-item__meta">
-          Universidad Nacional de Santiago del Estero
+
+          {{ t.experience.education.institution }}
+
         </p>
+
+
+
+
 
         <div class="timeline-badges">
 
-          <span>
-            3rd year
-          </span>
 
           <span>
-            GPA 8.1 / 10
+
+            {{ t.experience.education.year }}
+
           </span>
+
+
+
+          <span>
+
+            {{ t.experience.education.gpa }}
+
+          </span>
+
 
         </div>
 
+
+
+
+
         <p>
-          Engineering studies covering circuit analysis,
-          electromagnetics, electronics, electrical systems,
-          mathematics, physics and engineering computation.
+
+          {{ t.experience.education.description }}
+
         </p>
 
+
+
+
       </div>
+
 
     </article>
 
 
+
+
+
+
+
     <article class="timeline-item">
 
+
       <div class="timeline-item__date">
+
         2022 — 2025
+
       </div>
+
+
+
+
 
       <div class="timeline-item__content">
 
+
         <h3>
-          Undergraduate Teaching Assistant
+
+          {{ t.experience.teaching.title }}
+
         </h3>
 
+
+
+
+
         <p class="timeline-item__meta">
-          Universidad Nacional de Santiago del Estero
+
+          {{ t.experience.teaching.institution }}
+
         </p>
+
+
+
+
+
 
         <ul class="timeline-list">
 
-          <li>
-            Taught algorithms and pseudocode with PSeInt
-            and scientific programming with Scilab to
-            engineering students.
-          </li>
+
+          {% for bullet in t.experience.teaching.bullets %}
 
           <li>
-            Taught Microsoft Word, Excel and Access to
-            students in scientific degree programmes,
-            including Biotechnology and Chemistry.
+
+            {{ bullet }}
+
           </li>
 
-          <li>
-            Combined theory with hands-on exercises to
-            strengthen problem-solving skills for
-            approximately 120 students per year.
-          </li>
+          {% endfor %}
+
+
 
         </ul>
 
+
+
+
+
       </div>
+
 
     </article>
 
 
+
+
+
+
+
     <article class="timeline-item">
 
+
       <div class="timeline-item__date">
+
         Since 2016
+
       </div>
+
+
+
+
 
       <div class="timeline-item__content">
 
+
         <h3>
-          Private Academic Tutor
+
+          {{ t.experience.tutor.title }}
+
         </h3>
 
+
+
+
+
         <p class="timeline-item__meta">
-          Freelance
+
+          {{ t.experience.tutor.institution }}
+
         </p>
 
+
+
+
+
         <p>
-          Provided individual tutoring in English, French,
-          Mathematics and Science to secondary-school students,
-          with a focus on study methods, problem solving and
-          academic support.
+
+          {{ t.experience.tutor.description }}
+
         </p>
+
+
+
+
 
       </div>
 
+
     </article>
+
+
+
+
 
   </div>
 
 
-  <!-- ======================================================
-       CERTIFICATIONS
-  ======================================================= -->
 
-  <div class="subsection-heading">
 
-    <span class="section-kicker">
-      Additional training
-    </span>
 
-    <h2>
-      Certifications.
-    </h2>
+
+
+
+<!-- ======================================================
+     CERTIFICATIONS
+======================================================= -->
+
+
+
+
+<div class="subsection-heading">
+
+
+  <span class="section-kicker">
+
+    {{ t.certifications.kicker }}
+
+  </span>
+
+
+
+
+
+  <h2>
+
+    {{ t.certifications.title }}
+
+  </h2>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="timeline">
+
+
+
+
+
+
+<article class="timeline-item">
+
+
+  <div class="timeline-item__date">
+
+    December 2025
+
+  </div>
+
+
+
+
+  <div class="timeline-item__content">
+
+
+
+    <h3>
+
+      {{ t.certifications.cambridge.title }}
+
+    </h3>
+
+
+
+
+
+    <p class="timeline-item__meta">
+
+      {{ t.certifications.cambridge.issuer }}
+
+    </p>
+
+
+
+
+
+    <div class="timeline-badges">
+
+
+      {% for badge in t.certifications.cambridge.badges %}
+
+      <span>
+
+        {{ badge }}
+
+      </span>
+
+      {% endfor %}
+
+
+
+    </div>
+
+
+
+
+
+    <p>
+
+      {{ t.certifications.cambridge.description }}
+
+    </p>
+
+
+
 
   </div>
 
 
-  <div class="timeline">
-
-    <article class="timeline-item">
-
-      <div class="timeline-item__date">
-        December 2025
-      </div>
-
-      <div class="timeline-item__content">
-
-        <h3>
-          C1 Advanced
-        </h3>
-
-        <p class="timeline-item__meta">
-          Cambridge English
-        </p>
-
-        <div class="timeline-badges">
-
-          <span>
-            Grade A
-          </span>
-
-          <span>
-            CEFR C2
-          </span>
-
-        </div>
-
-        <p>
-          Cambridge C1 Advanced qualification awarded
-          Grade A, corresponding to CEFR Level C2.
-        </p>
-
-      </div>
-
-    </article>
+</article>
 
 
-    <article class="timeline-item">
-
-      <div class="timeline-item__date">
-        August 2025
-      </div>
-
-      <div class="timeline-item__content">
-
-        <h3>
-          CS50x: Introduction to Computer Science
-        </h3>
-
-        <p class="timeline-item__meta">
-          Harvard University
-        </p>
-
-        <div class="timeline-badges">
-
-          <span>C</span>
-          <span>Python</span>
-          <span>SQL</span>
-          <span>HTML/CSS</span>
-          <span>JavaScript</span>
-
-        </div>
-
-        <p>
-          Computer science fundamentals including algorithms,
-          data structures, memory, databases and web development,
-          culminating in an independent final project.
-        </p>
-
-      </div>
-
-    </article>
 
 
-    <article class="timeline-item">
 
-      <div class="timeline-item__date">
-        August 2023
-      </div>
 
-      <div class="timeline-item__content">
 
-        <h3>
-          R for Research
-        </h3>
 
-        <p class="timeline-item__meta">
-          CONICET
-        </p>
+<article class="timeline-item">
 
-        <div class="timeline-badges">
 
-          <span>20 hours</span>
-          <span>R</span>
-          <span>Data analysis</span>
+  <div class="timeline-item__date">
 
-        </div>
-
-        <p>
-          Applied R to research-oriented data analysis through
-          practical case studies and problem solving.
-        </p>
-
-      </div>
-
-    </article>
+    August 2025
 
   </div>
+
+
+
+
+
+  <div class="timeline-item__content">
+
+
+
+    <h3>
+
+      {{ t.certifications.cs50.title }}
+
+    </h3>
+
+
+
+
+
+    <p class="timeline-item__meta">
+
+      {{ t.certifications.cs50.issuer }}
+
+    </p>
+
+
+
+
+
+    <div class="timeline-badges">
+
+
+      {% for badge in t.certifications.cs50.badges %}
+
+      <span>
+
+        {{ badge }}
+
+      </span>
+
+      {% endfor %}
+
+
+
+    </div>
+
+
+
+
+
+    <p>
+
+      {{ t.certifications.cs50.description }}
+
+    </p>
+
+
+
+
+  </div>
+
+
+</article>
+
+
+
+
+
+
+
+
+<article class="timeline-item">
+
+
+  <div class="timeline-item__date">
+
+    August 2023
+
+  </div>
+
+
+
+
+
+  <div class="timeline-item__content">
+
+
+
+    <h3>
+
+      {{ t.certifications.r.title }}
+
+    </h3>
+
+
+
+
+
+    <p class="timeline-item__meta">
+
+      {{ t.certifications.r.issuer }}
+
+    </p>
+
+
+
+
+
+    <div class="timeline-badges">
+
+
+      {% for badge in t.certifications.r.badges %}
+
+      <span>
+
+        {{ badge }}
+
+      </span>
+
+      {% endfor %}
+
+
+
+    </div>
+
+
+
+
+
+    <p>
+
+      {{ t.certifications.r.description }}
+
+    </p>
+
+
+
+
+  </div>
+
+
+</article>
+
+
+
+
+
+</div>
+
+
+
+
 
 </section>
-
 
 <!-- ======================================================
      CV
 ======================================================= -->
+
 
 <section
   class="portfolio-section"
   id="cv"
 >
 
-  {% assign cv_en = '/assets/CV English.pdf' | relative_url %}
-  {% assign cv_es = '/assets/CV spanish.pdf' | relative_url %}
 
 
-  <div class="cv-box">
+{% assign cv_en = '/assets/CV English.pdf' | relative_url %}
 
-    <div>
-
-      <span class="section-kicker">
-        Curriculum Vitae
-      </span>
-
-      <h2>
-        Prefer the conventional version?
-      </h2>
-
-      <p>
-        My CV is available in English and Spanish.
-      </p>
-
-    </div>
+{% assign cv_es = '/assets/CV spanish.pdf' | relative_url %}
 
 
-    <div class="cv-actions">
 
-      <a
-        href="{{ cv_en }}"
-        target="_blank"
-        rel="noopener"
-        class="btn btn--primary"
-      >
-        English CV ↗
-      </a>
 
-      <a
-        href="{{ cv_es }}"
-        target="_blank"
-        rel="noopener"
-        class="btn btn--secondary"
-      >
-        CV en Español ↗
-      </a>
 
-    </div>
+<div class="cv-box">
+
+
+
+  <div>
+
+
+
+    <span class="section-kicker">
+
+      {{ t.cv.kicker }}
+
+    </span>
+
+
+
+
+
+    <h2>
+
+      {{ t.cv.title }}
+
+    </h2>
+
+
+
+
+
+    <p>
+
+      {{ t.cv.description }}
+
+    </p>
+
+
 
   </div>
 
+
+
+
+
+
+  <div class="cv-actions">
+
+
+
+
+
+    <a
+      href="{{ cv_en }}"
+      target="_blank"
+      rel="noopener"
+      class="btn btn--primary"
+    >
+
+      {{ t.cv.english }}
+
+    </a>
+
+
+
+
+
+
+    <a
+      href="{{ cv_es }}"
+      target="_blank"
+      rel="noopener"
+      class="btn btn--secondary"
+    >
+
+      {{ t.cv.spanish }}
+
+    </a>
+
+
+
+
+
+  </div>
+
+
+
+
+
+</div>
+
+
+
+
+
 </section>
+
+
+
+
+
+
 
 
 <!-- ======================================================
      CONTACT
 ======================================================= -->
 
+
 <section
   class="portfolio-section"
   id="contact"
 >
 
-  <div class="contact-card">
-
-    <span class="section-kicker">
-      Contact
-    </span>
-
-    <h2>
-      Let's build something useful.
-    </h2>
-
-    <p>
-      I am interested in internships and entry-level
-      opportunities in power systems, industrial automation,
-      electrical analysis and measurement.
-    </p>
 
 
-    <div class="hero__actions">
+<div class="contact-card">
 
-      <a
-        href="mailto:chevauchey.clement@gmail.com"
-        class="btn btn--primary"
-      >
-        Email me
-      </a>
 
-      <a
-        href="https://www.linkedin.com/in/clément-chevauchey-413644179/"
-        target="_blank"
-        rel="noopener"
-        class="btn btn--secondary"
-      >
-        LinkedIn ↗
-      </a>
 
-      <a
-        href="https://github.com/YofiClemy"
-        target="_blank"
-        rel="noopener"
-        class="btn btn--ghost"
-      >
-        GitHub ↗
-      </a>
 
-    </div>
 
-  </div>
+<span class="section-kicker">
 
-</section>
+  {{ t.contact.kicker }}
+
+</span>
+
+
+
+
+
+
+
+<h2>
+
+  {{ t.contact.title }}
+
+</h2>
+
+
+
+
+
+
+
+<p>
+
+  {{ t.contact.description }}
+
+</p>
+
+
+
+
+
+
+
+<div class="hero__actions">
+
+
+
+
+
+<a
+  href="mailto:chevauchey.clement@gmail.com"
+  class="btn btn--primary"
+>
+
+  {{ t.contact.email }}
+
+</a>
+
+
+
+
+
+
+
+<a
+  href="https://www.linkedin.com/in/clément-chevauchey-413644179/"
+  target="_blank"
+  rel="noopener"
+  class="btn btn--secondary"
+>
+
+  {{ t.contact.linkedin }}
+
+</a>
+
+
+
+
+
+
+
+<a
+  href="https://github.com/YofiClemy"
+  target="_blank"
+  rel="noopener"
+  class="btn btn--ghost"
+>
+
+  {{ t.contact.github }}
+
+</a>
+
+
+
+
+
 
 
 </div>
 
+
+
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+</div>
 
 <script>
 
