@@ -1,5 +1,13 @@
 en:
 
+  header:
+    profile: "Profile"
+    projects: "Projects"
+    experience: "Experience"
+    cv: "CV"
+    contact: "Contact"
+    theme: "Light"
+
   hero:
 
     eyebrow: "Power Systems · Automation · Engineering Computing"
@@ -26,14 +34,6 @@ en:
     availability: >
       Open to 2026–27 internships and entry-level
       opportunities in Argentina and remotely.
-
-  header:
-    profile: "Profile"
-    projects: "Projects"
-    experience: "Experience"
-    cv: "CV"
-    contact: "Contact"
-    theme: "Light"
 
   technical:
 
@@ -363,6 +363,14 @@ en:
 
 es:
 
+    header:
+      profile: "Perfil"
+      projects: "Proyectos"
+      experience: "Experiencia"
+      cv: "CV"
+      contact: "Contacto"
+      theme: "Claro"
+
   hero:
 
     eyebrow: "Sistemas Eléctricos · Automatización · Computación aplicada"
@@ -386,14 +394,6 @@ es:
       protecciones, automatización y mediciones eléctricas
       mediante simulación, programación y proyectos
       prácticos de ingeniería.
-
-    header:
-      profile: "Perfil"
-      projects: "Proyectos"
-      experience: "Experiencia"
-      cv: "CV"
-      contact: "Contacto"
-      theme: "Claro"
   
     buttons:
 
