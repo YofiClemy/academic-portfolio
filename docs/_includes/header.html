@@ -136,21 +136,21 @@ href="{{ home }}#contact"
 {% if page.lang == "es" %}
 
 <a
-  class="language-toggle"
-  href="{{ '/' | relative_url }}"
-  aria-label="Switch to English"
+href="{{ '/' | relative_url }}"
+onclick="localStorage.setItem('language','en')"
+class="language-toggle"
 >
-  EN
+EN
 </a>
 
 {% else %}
 
 <a
-  class="language-toggle"
-  href="{{ '/es/' | relative_url }}"
-  aria-label="Cambiar a español"
+href="{{ '/es/' | relative_url }}"
+onclick="localStorage.setItem('language','es')"
+class="language-toggle"
 >
-  ES
+ES
 </a>
 
 {% endif %}
