@@ -122,6 +122,37 @@
 ... (rest of file remains unchanged) ...
 
 <script>
-// set html lang for accessibility
-document.documentElement.lang = "{% raw %}{{ page.lang | default: 'en' }}{% endraw %}";
+// existing JS remains unchanged (search + filtering) — it uses ids/classes already present
+document.addEventListener("DOMContentLoaded", function () {
+  const search = document.getElementById("q");
+  const chips = document.querySelectorAll(".chip");
+  const cards = document.querySelectorAll("#grid .card");
+  const noResults = document.getElementById("no-results");
+  let activeCategory = "all";
+  function filterProjects() {
+    const query = search ? search.value.trim().toLowerCase() : "";
+    let visible = 0;
+    cards.forEach(function (card) {
+      const category = (card.dataset.cat || "").toLowerCase();
+      const categories = category.split(/[,\s]+/).filter(Boolean);
+      const searchable = card.textContent.toLowerCase();
+      const categoryMatch = activeCategory === "all" || categories.includes(activeCategory) || category === activeCategory;
+      const searchMatch = query === "" || searchable.includes(query);
+      const show = categoryMatch && searchMatch;
+      card.style.display = show ? "" : "none";
+      if (show) visible++;
+    });
+    if (noResults) noResults.style.display = visible === 0 ? "block" : "none";
+  }
+  chips.forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      chips.forEach(function (c) { c.classList.remove("active"); });
+      chip.classList.add("active");
+      activeCategory = chip.dataset.cat || "all";
+      filterProjects();
+    });
+  });
+  if (search) search.addEventListener("input", filterProjects);
+  filterProjects();
+});
 </script>
