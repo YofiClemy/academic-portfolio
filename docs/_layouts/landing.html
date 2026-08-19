@@ -1,6 +1,125 @@
 ---
 layout: default
 ---
+
+<!-- Language selector modal -->
+<div id="language-modal" class="language-modal">
+
+  <div class="language-modal__box">
+
+    <h2>
+      Choose your language
+    </h2>
+
+    <p>
+      Selecciona tu idioma
+    </p>
+
+
+    <div class="language-modal__buttons">
+
+      <a
+        href="{{ '/' | relative_url }}"
+        class="language-choice"
+        data-lang="en"
+      >
+        🇬🇧 English
+      </a>
+
+
+      <a
+        href="{{ '/es/' | relative_url }}"
+        class="language-choice"
+        data-lang="es"
+      >
+        🇦🇷 Español
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const modal =
+    document.getElementById("language-modal");
+
+
+  const savedLanguage =
+    localStorage.getItem("portfolio-language");
+
+
+  const currentPath =
+    window.location.pathname;
+
+
+  const isSpanish =
+    currentPath.includes("/es/");
+
+
+  /*
+    First visit:
+    show selector
+  */
+
+  if (!savedLanguage) {
+
+    modal.classList.add("active");
+
+  }
+
+
+  /*
+    Redirect automatically
+    if preference exists
+  */
+
+  if (savedLanguage === "es" && !isSpanish) {
+
+    window.location.href =
+      "{{ '/es/' | relative_url }}";
+
+  }
+
+
+  if (savedLanguage === "en" && isSpanish) {
+
+    window.location.href =
+      "{{ '/' | relative_url }}";
+
+  }
+
+
+
+  document
+    .querySelectorAll(".language-choice")
+    .forEach(button => {
+
+
+      button.addEventListener("click", () => {
+
+
+        localStorage.setItem(
+          "portfolio-language",
+          button.dataset.lang
+        );
+
+
+      });
+
+
+    });
+
+
+});
+
+</script>
+
 <div class="page-content">
   <div class="wrapper">
     {{ content }}
