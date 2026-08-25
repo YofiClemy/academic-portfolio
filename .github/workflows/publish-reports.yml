@@ -1,13 +1,19 @@
 name: Publish reports into docs
+
 on:
   push:
     branches: [ main ]
     paths:
       - '**/report.pdf'
+      - '!docs/**'
       - '.github/workflows/publish-reports.yml'
 
 permissions:
   contents: write
+
+concurrency:
+  group: publish-reports-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   publish:
@@ -15,21 +21,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Mirror every report.pdf under docs/
+      - name: Rebuild report mirror
+        shell: bash
         run: |
           set -euo pipefail
-          mkdir -p docs
-          # find all report.pdf outside docs/, mirror each into docs/<same path>
+
+          # Remove old mirrors first so deleted/renamed source reports cannot linger.
+          find docs -type f -name 'report.pdf' -delete
+
           while IFS= read -r -d '' SRC; do
-            REL="${SRC#./}"                                  # strip leading ./ 
-            DEST="docs/${REL}"                               # mirror path
+            REL="${SRC#./}"
+            DEST="docs/${REL}"
             mkdir -p "$(dirname "$DEST")"
             cp -f "$SRC" "$DEST"
             echo "Copied: $SRC -> $DEST"
           done < <(find . -type f -name 'report.pdf' ! -path './docs/*' -print0)
 
-      - name: Commit changes (if any)
+      - name: Commit changes if needed
         uses: EndBug/add-and-commit@v9
         with:
           add: docs
-          message: "chore(docs): mirror report.pdf files into docs/"
+          message: "chore(docs): refresh report mirrors"

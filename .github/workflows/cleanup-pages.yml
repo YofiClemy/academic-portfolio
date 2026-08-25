@@ -27,18 +27,34 @@ jobs:
             i=$((i+1))
             [ -z "$id" ] && continue
             if [ $i -le $KEEP ]; then
-              echo "Keeping $id"
+              echo "Keeping deployment $id"
               continue
             fi
-            echo "Inactivating $id"; gh api -X POST "repos/$REPO/deployments/$id/statuses" -f state=inactive >/dev/null
-            echo "Deleting $id";     gh api -X DELETE "repos/$REPO/deployments/$id" >/dev/null
+            echo "Inactivating deployment $id"
+            gh api -X POST "repos/$REPO/deployments/$id/statuses" -f state=inactive >/dev/null
+            echo "Deleting deployment $id"
+            gh api -X DELETE "repos/$REPO/deployments/$id" >/dev/null
           done
 
-      - name: Delete old Pages build workflow runs
+      - name: Delete old Pages build workflow runs (keep 20 newest)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          KEEP_RUNS: 20
         run: |
-          # delete all historical runs of "Pages build and deployment"
-          gh run list --workflow "Pages build and deployment" --limit 1000 \
-            --json databaseId -q '.[].databaseId' \
-          | xargs -r -n1 -I{} gh run delete {} --yes
+          set -euo pipefail
+          i=0
+          gh run list \
+            --workflow "Pages build and deployment" \
+            --limit 1000 \
+            --json databaseId \
+            -q '.[].databaseId' \
+          | while read -r id; do
+              [ -z "$id" ] && continue
+              i=$((i+1))
+              if [ $i -le $KEEP_RUNS ]; then
+                echo "Keeping workflow run $id"
+              else
+                echo "Deleting workflow run $id"
+                gh run delete "$id" --yes
+              fi
+            done

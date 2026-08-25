@@ -1,4 +1,4 @@
-title: "Cl\xE9ment Chevauchey - Engineering Portfolio"
+title: "Clément Chevauchey - Engineering Portfolio"
 description: Power Systems, Automation & Electronics
 theme: minima
 plugins:
@@ -8,5 +8,5 @@ markdown: kramdown
 kramdown:
   input: GFM
 baseurl: '/academic-portfolio'
-url: 'https://yoficlemy.github.io'
-repo_url_base: "https://github.com/YofiClemy/academic-portfolio/tree/main"
+url: 'https://chevaucheyclement.github.io'
+repo_url_base: "https://github.com/ChevaucheyClement/academic-portfolio/tree/main"

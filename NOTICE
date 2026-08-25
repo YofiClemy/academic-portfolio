@@ -1,12 +1,13 @@
 Dual licensing notice
 
 - Code: MIT (see root LICENSE).
-- Documentation, reports, and images under `docs/` and any `*/report/*`, `*/img/*`:
-  Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
+- Documentation, reports, figures, images, and other non-code portfolio content: Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0), unless a file explicitly states otherwise.
 
-Attribution format for docs/images:
-  © 2025 Clément Chevauchey — Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/)
+Attribution format for documentation and images:
+  © Clément Chevauchey — Licensed CC BY-NC 4.0
+  https://creativecommons.org/licenses/by-nc/4.0/
 
 Notes:
-- GitHub shows a single license badge; it will display **MIT** for the repository.
-- The CC BY-NC 4.0 terms apply to non-code content as described above.
+- GitHub may display only the repository's primary MIT license badge.
+- The CC BY-NC 4.0 terms apply to the non-code content described above.
+- Code snippets embedded in documentation remain covered by the root MIT LICENSE unless explicitly stated otherwise.

@@ -1,23 +1,20 @@
 ---
-layout: landing
-title: Projects
+layout: null
 permalink: /projects/
+sitemap: false
 ---
-
-<!-- Projects page reuses the same grid -->
-<section class="controls">
-  <input id="q" type="search" placeholder="Search projects… (title, subtitle, tag)" aria-label="Search projects">
-  <div id="chips" class="chips">
-    <button class="chip active" data-cat="all">All</button>
-    <button class="chip" data-cat="measurements">Measurements</button>
-    <button class="chip" data-cat="electronics">Electronics</button>
-    <button class="chip" data-cat="logic">Logic</button>
-    <button class="chip" data-cat="power">Power/Thermo</button>
-  </div>
-</section>
-
-<section class="grid" id="grid">
-{% for p in site.data.projects %}
-  {% include card.html p=p %}
-{% endfor %}
-</section>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="0; url={{ '/#projects' | relative_url }}">
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="{{ '/' | absolute_url }}">
+  <title>Projects · Clément Chevauchey</title>
+  <script>window.location.replace("{{ '/#projects' | relative_url }}");</script>
+</head>
+<body>
+  <p><a href="{{ '/#projects' | relative_url }}">Continue to projects</a></p>
+</body>
+</html>

@@ -1,18 +1,20 @@
 ---
-layout: page
-title: About
+layout: null
 permalink: /about/
+sitemap: false
 ---
-
-# About
-
-I'm **Clément Chevauchey**, an Electrical Engineering student (UNSE, FCEyT Argentina) focusing on **Power Systems & Automation**.
-I have in mind to build a Europe-ready skillset (PowerFactory, PLC/SCADA, protection basics) and documenting hands-on labs
-in measurements, electronics, and control/logic.
-
-- **Interests:** grid automation, SCADA/PLC, protection, power quality, and energy systems integration.
-- **Experience:** 3 years as **Teaching Assistant (informatics)**; multiple lab projects (measurements & electronics).
-- **Languages:** French (native), Spanish (C1), English (C1).
-- **Now:** assembling a portfolio of clean, reproducible labs and small tools for utilities/automation recruiters.
-
-**This site** is a curated, privacy‑safe portfolio. Instructor names and collaborator identities are anonymized.
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="0; url={{ '/#about' | relative_url }}">
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="{{ '/' | absolute_url }}">
+  <title>Profile · Clément Chevauchey</title>
+  <script>window.location.replace("{{ '/#about' | relative_url }}");</script>
+</head>
+<body>
+  <p><a href="{{ '/#about' | relative_url }}">Continue to profile</a></p>
+</body>
+</html>

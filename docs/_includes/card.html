@@ -6,7 +6,12 @@
 
   <div class="card__thumb {% unless p.thumb %}card__thumb--empty{% endunless %}">
     {% if p.thumb and p.thumb != '' %}
-      <img src="{{ p.thumb | relative_url }}" alt="Thumbnail — {{ p.title }}">
+      <img
+        src="{{ p.thumb | relative_url }}"
+        alt="Thumbnail — {{ p.title }}"
+        loading="lazy"
+        decoding="async"
+      >
     {% endif %}
     <div class="card__tags">
       <span class="tag tag--cat">{{ p.category | default: '' | capitalize }}</span>
@@ -27,9 +32,9 @@
     {% endif %}
 
     <div class="card__actions">
-      {%- comment -%} Repo (works with relative path or absolute URL) {%- endcomment -%}
-      {% assign repo_href = nil %}
-      {% if p.path %}
+      {%- comment -%} Repository URL: explicit repo wins; relative path falls back to this repository. {%- endcomment -%}
+      {% assign repo_href = p.repo %}
+      {% if repo_href == nil and p.path %}
         {% assign repo_href = p.path %}
         {% unless repo_href contains '://' %}
           {% assign repo_href = site.repo_url_base | append: '/' | append: repo_href %}
@@ -41,7 +46,13 @@
            target="_blank" rel="noopener noreferrer">Repo</a>
       {% endif %}
 
-      {%- comment -%} README (auto for relative path, or use provided URL) {%- endcomment -%}
+      {% if p.demo and p.demo != '' %}
+        <a class="btn"
+           href="{{ p.demo }}"
+           target="_blank" rel="noopener noreferrer">Live site</a>
+      {% endif %}
+
+      {%- comment -%} README: auto for repository-relative paths, or use an explicit URL. {%- endcomment -%}
       {% assign readme_url = nil %}
       {% if p.readme %}
         {% if p.readme == true or p.readme == 'auto' %}
@@ -51,6 +62,8 @@
             {% else %}
               {% assign readme_url = site.repo_url_base | append: '/' | append: p.path | append: '#readme' %}
             {% endif %}
+          {% elsif p.repo %}
+            {% assign readme_url = p.repo | append: '#readme' %}
           {% endif %}
         {% else %}
           {% assign readme_url = p.readme %}
@@ -60,12 +73,18 @@
         <a class="btn" href="{{ readme_url }}" target="_blank" rel="noopener noreferrer">README</a>
       {% endif %}
 
-      {%- comment -%} Report (PDF or URL). Auto only for site-relative p.path -> /<path>/report.pdf {%- endcomment -%}
+      {% if p.docs and p.docs != '' %}
+        <a class="btn" href="{{ p.docs }}" target="_blank" rel="noopener noreferrer">
+          {{ p.docs_label | default: 'Docs' }}
+        </a>
+      {% endif %}
+
+      {%- comment -%} Report: auto only for site-relative project paths. {%- endcomment -%}
       {% assign report_href = nil %}
       {% if p.report and p.report != '' %}
         {% if p.report == true or p.report == 'auto' %}
           {% if p.path and p.path contains '://' %}
-            {# Skip auto for absolute paths #}
+            {%- comment -%} No automatic report URL for external projects. {%- endcomment -%}
           {% elsif p.path %}
             {% assign report_href = '/' | append: p.path | append: '/report.pdf' %}
           {% endif %}
@@ -78,7 +97,6 @@
         <a class="btn" href="{{ report_href }}" target="_blank" rel="noopener noreferrer">Report</a>
       {% endif %}
 
-      {%- comment -%} Spanish Report (PDF or URL) {%- endcomment -%}
       {% if p.report_es and p.report_es != '' %}
         {% assign report_es_href = p.report_es %}
         {% unless report_es_href contains '://' %}{% assign report_es_href = report_es_href | relative_url %}{% endunless %}

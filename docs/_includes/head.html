@@ -1,68 +1,18 @@
 {%- comment -%} Global head override {%- endcomment -%}
 
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1"
->
+{% seo %}
 
-<title>
-  {% if page.title and page.title != "" %}
-    {{ page.title }} ·
-  {% endif %}
-  {{ site.title }}
-</title>
-
-
-<!-- Minima base CSS -->
-
-<link
-  rel="stylesheet"
-  href="{{ '/assets/main.css' | relative_url }}"
->
-
-
-<!-- Site-wide design -->
-
+<link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/modern.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/landing.css' | relative_url }}">
 
+<script defer src="{{ '/assets/js/theme.js' | relative_url }}"></script>
 
-<!-- Site-wide JS -->
-
-<script
-  defer
-  src="{{ '/assets/js/portfolio.js' | relative_url }}"
-></script>
-
-<script
-  defer
-  src="{{ '/assets/js/theme.js' | relative_url }}"
-></script>
-
-
-<meta
-  name="description"
-  content="Electrical Engineering portfolio — power systems, automation, protection and engineering computing."
->
-
-<meta
-  property="og:title"
-  content="Clément Chevauchey — Engineering Portfolio"
->
-
-<meta
-  property="og:description"
-  content="Electrical Engineering portfolio focused on power systems, automation and engineering computing."
->
-
-<meta
-  property="og:type"
-  content="website"
->
-
-<meta
-  property="og:url"
-  content="{{ site.url }}{{ site.baseurl }}/"
->
+{% if page.url == '/' or page.url == '/es/' %}
+<link rel="alternate" hreflang="en" href="{{ '/' | absolute_url }}">
+<link rel="alternate" hreflang="es" href="{{ '/es/' | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}">
+{% endif %}
