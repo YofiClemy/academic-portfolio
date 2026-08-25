@@ -2,22 +2,13 @@
 layout: default
 ---
 
-<!-- Language selector modal -->
-<div id="language-modal" class="language-modal">
-
+<!-- First-visit language selector. Manual language switching always wins. -->
+<div id="language-modal" class="language-modal" aria-labelledby="language-modal-title">
   <div class="language-modal__box">
-
-    <h2>
-      Choose your language
-    </h2>
-
-    <p>
-      Selecciona tu idioma
-    </p>
-
+    <h2 id="language-modal-title">Choose your language</h2>
+    <p>Selecciona tu idioma</p>
 
     <div class="language-modal__buttons">
-
       <a
         href="{{ '/' | relative_url }}"
         class="language-choice"
@@ -26,7 +17,6 @@ layout: default
         🇬🇧 English
       </a>
 
-
       <a
         href="{{ '/es/' | relative_url }}"
         class="language-choice"
@@ -34,93 +24,29 @@ layout: default
       >
         🇦🇷 Español
       </a>
-
     </div>
-
   </div>
-
 </div>
 
-
 <script>
+(() => {
+  const STORAGE_KEY = "portfolio-language";
+  const modal = document.getElementById("language-modal");
 
-document.addEventListener("DOMContentLoaded", () => {
+  if (!modal) return;
 
-  const modal =
-    document.getElementById("language-modal");
-
-
-  const savedLanguage =
-    localStorage.getItem("portfolio-language");
-
-
-  const currentPath =
-    window.location.pathname;
-
-
-  const isSpanish =
-    currentPath.includes("/es/");
-
-
-  /*
-    First visit:
-    show selector
-  */
+  const savedLanguage = localStorage.getItem(STORAGE_KEY);
 
   if (!savedLanguage) {
-
     modal.classList.add("active");
-
   }
 
-
-  const currentPath = window.location.pathname;
-  
-  const savedLanguage = localStorage.getItem("language");
-  
-  
-  if (!savedLanguage) {
-    return;
-  }
-  
-  
-  // only redirect from the root page
-  // never override manual language switching
-  
-  if (
-    currentPath.endsWith("/academic-portfolio/") &&
-    savedLanguage === "es"
-  ) {
-    window.location.href = "/academic-portfolio/es/";
-  }
-  
-  
-  });
-
-
-
-  document
-    .querySelectorAll(".language-choice")
-    .forEach(button => {
-
-
-      button.addEventListener("click", () => {
-
-
-        localStorage.setItem(
-          "portfolio-language",
-          button.dataset.lang
-        );
-
-
-      });
-
-
+  modal.querySelectorAll(".language-choice").forEach(link => {
+    link.addEventListener("click", () => {
+      localStorage.setItem(STORAGE_KEY, link.dataset.lang);
     });
-
-
-});
-
+  });
+})();
 </script>
 
 <div class="page-content">

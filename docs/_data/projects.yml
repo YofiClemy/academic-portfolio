@@ -1,17 +1,7 @@
-- title: Power studies feeder
-  category: power
-  path: /power-studies-feeder
-  subtitle: "MV feeder study: LF + SC + cap/rebalance sweep"
-  outcome: Ran baseline LF/SC on the CIGRE MV feeder, enumerated actions (OLTC, shunt caps, targeted rebalancing), snapshotted KPIs, and auto-selected the lightest fix meeting planning limits (Vmin ≥ 0.95 pu, Vmax ≤ 1.05 pu, line/trafo ≤ 100%).
-  Selected case: cap_1.0MVAr+rebalance_90pct (1.0 MVAr at bus 11, 10% load transfer on hot LV feeder). CSV summaries, stress/voltage plots, before/after network snapshots.
-  skills: Python, pandapower, pandas, matplotlib, Power systems analysis, Load-flow, IEC 60909 short-circuit, Heuristic optimization / scenario ranking, Data visualization, Reproducible pipelines
-  thumb : /assets/thumbs/power-studies-feeder.png
-  readme: true
-  report: auto
-
 - title: PlantWeb (CS50 Final)
   category: web
-  path: https://yoficlemy.github.io/Final-Project-CS50/
+  repo: https://github.com/YofiClemy/Final-Project-CS50
+  demo: https://yoficlemy.github.io/Final-Project-CS50/
   subtitle: Full-stack course project
   outcome: Built, documented, and demoed a working web app as my CS50 final project.
   skills: CS50, Python/JS, web app design, documentation, demos
@@ -19,22 +9,22 @@
 
 - title: Electronics II (7 Labs)
   category: electronics
-  path: electronics/
+  path: electronics
   subtitle: Analog, diodes, BJT, op-amp
   outcome: Built & verified rectifier, clipper, BJT single/cascade, and op-amp labs against specs.
   skills: LTspice/Proteus, biasing & small-signal, gain/bandwidth, measurement planning
   thumb: /assets/thumbs/electronics.png
   readme: true
-  report: https://github.com/YofiClemy/academic-portfolio/tree/main/electronics
-  
+
 - title: Electrical Measurements (7 Labs)
-  category: Measurements
-  path: measurements/
+  category: measurements
+  path: measurements
   subtitle: Metrology & AC/DC measurement techniques
   outcome: "Verified instrument class; measured R, Z, and single/three-phase power using VA, comparison/substitution, Wheatstone, 3A/3V, wattmeter & Aron; quantified uncertainty."
   skills: "Calibration, Type A/B uncertainty, bridge balancing, phasors & PF, wattmeter wiring, data analysis (Python), clear lab reporting"
   thumb: /assets/thumbs/measurements.png
-  readme: true
+  docs: https://github.com/YofiClemy/academic-portfolio/blob/main/measurements/CODE-HOWTO.md
+  docs_label: Code guide
 
 - title: Traffic Lights FSM (Proteus)
   category: logic
@@ -52,7 +42,7 @@
   subtitle: "Superheat vs no superheat; ideal vs real"
   outcome: "Compared η_th and specific work across pressure/temperature/superheat cases."
   skills: "Cycle modeling, property tables, η_th gap (ideal vs real), plots"
-  thumb : /assets/thumbs/Rankine.png
+  thumb: /assets/thumbs/Rankine.png
   readme: true
 
 - title: Otto / Diesel / Dual
@@ -61,5 +51,5 @@
   subtitle: η_th vs compression ratio
   outcome: Quantified efficiency impact of r, γ, and heat-addition model (Otto/Diesel/Dual).
   skills: Thermo cycles, parametric sweeps, result interpretation
-  thumb : /assets/thumbs/Otto_Diesel_Dual.png
+  thumb: /assets/thumbs/Otto_Diesel_Dual.png
   readme: true

@@ -1,0 +1,85 @@
+name: Validate portfolio
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Jekyll site
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./docs
+          destination: ./_site
+
+      - name: Check generated local links
+        shell: python
+        run: |
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import unquote, urlsplit
+
+          site = Path("_site").resolve()
+          baseurl = "/academic-portfolio"
+          missing = []
+
+          class Parser(HTMLParser):
+              def __init__(self, html_path):
+                  super().__init__()
+                  self.html_path = html_path
+
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  for key in ("href", "src"):
+                      value = attrs.get(key)
+                      if not value:
+                          continue
+                      self.check(value)
+
+              def check(self, value):
+                  if value.startswith(("http://", "https://", "mailto:", "tel:", "javascript:", "data:", "#")):
+                      return
+
+                  path = unquote(urlsplit(value).path)
+                  if not path:
+                      return
+
+                  if path.startswith(baseurl):
+                      path = path[len(baseurl):] or "/"
+
+                  if path.startswith("/"):
+                      target = site / path.lstrip("/")
+                  else:
+                      target = self.html_path.parent / path
+
+                  if path.endswith("/"):
+                      target = target / "index.html"
+                  elif target.is_dir():
+                      target = target / "index.html"
+
+                  if not target.exists():
+                      missing.append((self.html_path.relative_to(site), value))
+
+          for html in site.rglob("*.html"):
+              parser = Parser(html)
+              parser.feed(html.read_text(encoding="utf-8", errors="ignore"))
+
+          if missing:
+              for source, value in missing:
+                  print(f"Missing local target: {source} -> {value}")
+              raise SystemExit(f"{len(missing)} broken local link(s) found")
+
+          print("Generated local links: OK")
+
+      - name: Check Python syntax
+        run: python -m compileall -q power-studies-feeder/code measurements

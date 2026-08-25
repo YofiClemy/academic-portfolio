@@ -7,18 +7,15 @@
 {% assign lang = page.lang | default: "en" %}
 {% assign t = site.data.i18n[lang] %}
 
-
 <header class="site-header" role="banner">
 
 <div class="wrapper site-header__inner">
-
 
 <a
   class="site-brand"
   href="{{ home }}"
   aria-label="Clément Chevauchey — Home"
 >
-
   <span class="site-brand__mark">
     CC<span>.</span>
   </span>
@@ -26,15 +23,12 @@
   <span class="site-brand__name">
     Clément Chevauchey
   </span>
-
 </a>
-
 
 <nav
   class="site-nav"
   aria-label="Main navigation"
 >
-
 
 <input
   type="checkbox"
@@ -42,17 +36,13 @@
   class="nav-trigger"
 />
 
-
 <label
   for="nav-trigger"
   class="nav-trigger-label"
   aria-label="Open navigation menu"
 >
-
 <span class="menu-icon">
-
 <svg viewBox="0 0 18 15" width="20" height="17" aria-hidden="true">
-
 <path d="
 M18,1.484
 c0,0.82-0.665,1.484-1.484,1.484
@@ -78,86 +68,54 @@ c0-0.82,0.665-1.484,1.484-1.484
 h15.032
 C17.335,12.032,18,12.696,18,13.516z
 "></path>
-
 </svg>
-
 </span>
-
 </label>
-
-
 
 <div class="trigger">
 
-
-<a
-class="page-link"
-href="{{ home }}#about"
->
+<a class="page-link" href="{{ home }}#about">
 {{ t.header.profile }}
 </a>
 
-
-<a
-class="page-link"
-href="{{ home }}#projects"
->
+<a class="page-link" href="{{ home }}#projects">
 {{ t.header.projects }}
 </a>
 
-
-<a
-class="page-link"
-href="{{ home }}#experience"
->
+<a class="page-link" href="{{ home }}#experience">
 {{ t.header.experience }}
 </a>
 
-
-<a
-class="page-link"
-href="{{ home }}#cv"
->
+<a class="page-link" href="{{ home }}#cv">
 {{ t.header.cv }}
 </a>
 
-
-<a
-class="page-link"
-href="{{ home }}#contact"
->
+<a class="page-link" href="{{ home }}#contact">
 {{ t.header.contact }}
 </a>
 
-
-
-<!-- Language switch -->
-
+<!-- Language switch. Use the same preference key as the first-visit modal. -->
 {% if page.lang == "es" %}
-
 <a
-href="{{ '/' | relative_url }}"
-onclick="localStorage.setItem('language','en')"
-class="language-toggle"
+  href="{{ '/' | relative_url }}"
+  onclick="localStorage.setItem('portfolio-language','en')"
+  class="language-toggle"
+  lang="en"
+  hreflang="en"
 >
 EN
 </a>
-
 {% else %}
-
 <a
-href="{{ '/es/' | relative_url }}"
-onclick="localStorage.setItem('language','es')"
-class="language-toggle"
+  href="{{ '/es/' | relative_url }}"
+  onclick="localStorage.setItem('portfolio-language','es')"
+  class="language-toggle"
+  lang="es"
+  hreflang="es"
 >
 ES
 </a>
-
 {% endif %}
-
-
-
-<!-- Theme toggle -->
 
 <button
   id="theme-toggle"
@@ -168,13 +126,7 @@ ES
   ☀︎ {{ t.header.theme }}
 </button>
 
-
 </div>
-
-
 </nav>
-
-
 </div>
-
 </header>
